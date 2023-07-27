@@ -6,7 +6,7 @@ style="margin-top: 18%"
 value="{{ selectedDate }}"
 (change)="onDateChange(person.id)"
 />
-
+<form class="form" id="form1">
 <h2>Booking Session</h2>
 Date:
 <p id="Date" name="text">{{ selectedDate }}</p>
@@ -20,7 +20,7 @@ Date:
 </li>
 </ul>
 
-<form class="form" id="form1">
+
 
 
   <h4 style="text-align: center; margin-top: 8%">
@@ -57,7 +57,7 @@ Date:
       </div> -->
 
   <div class="button-container">
-    <button type="button" (click)="startBookingProcess()" style="margin-bottom: 2%">Book Appointment</button>
+    <button type="submit" (click)="startBookingProcess()" style="margin-bottom: 2%">Book Appointment</button>
   </div>
 </form>
 

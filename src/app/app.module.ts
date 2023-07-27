@@ -12,12 +12,16 @@ import { FormsModule } from '@angular/forms';
 // import { CheckboxService } from './modules/admin/Mycomponents/checkbox.service';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SuccessComponent } from './components/payment/success/success.component';
+import { CancelComponent } from './components/payment/cancel/cancel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    SuccessComponent,
+    CancelComponent
   ],
   imports: [
     BrowserModule,

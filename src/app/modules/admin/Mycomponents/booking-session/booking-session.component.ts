@@ -29,8 +29,6 @@ export class BookingSessionComponent implements OnInit {
   selectedSlot!: string;
    
   constructor(private http: HttpClient, 
-    private router: Router,
-     private timeSlotService: TimeSlotService, 
      private route: ActivatedRoute, ) {}
 
   private formatDate(date: Date): string {
@@ -116,7 +114,7 @@ startBookingProcess(){
   this.http.post<any>(CONFIG['serverURL']+'/sessions/book/',formdata, { headers }).subscribe(
     (response:any) => {
       // Handle the response here
-      console.log(response);
+      window.location.href = response.redirect_url;
      },
     (error) => {
       // Handle errors here
