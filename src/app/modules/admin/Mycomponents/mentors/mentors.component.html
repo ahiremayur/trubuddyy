@@ -1,0 +1,283 @@
+<p>
+  <b
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, nam. Deserunt
+    quia cum praesentium earum autem. Dicta sit enim molestiae corrupti
+    temporibus, dolor, accusamus nulla soluta ut, culpa sequi et voluptatum
+    quod. Maiores, illum? Aliquam, vero? Neque possimus voluptatum est, quos,
+    sunt assumenda qui in aspernatur veritatis provident soluta nemo.</b
+  >
+</p>
+
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" [(ngModel)]="name" />
+
+  <label for="job">Profession:</label>
+  <input type="text" id="job" name="job" [(ngModel)]="job" />
+
+  <label for="degree">Degree:</label>
+  <input type="text" id="degree" name="degree" [(ngModel)]="degree" />
+
+  <label for="company">Company:</label>
+  <input type="text" id="company" name="company" [(ngModel)]="company" />
+
+  <button type="submit" (click)="onSearchSubmit()">Search</button>
+</form>
+
+<h2>Science</h2>
+
+<div class="container">
+  <div *ngFor="let item of items">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team" >
+          <div class="picture">
+            <a (click)="showPersonDetails(item.id)"
+              ><img
+                class="img-fluid"
+                src="{{'data:image/jpeg;base64,'+item.profile_pic}}"
+                
+            /></a>
+          </div>
+          <div class="team-content">
+            <h3 class="name">{{ item.full_name }}</h3>
+            <h4 class="title">{{ item.job }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h2>Commerce</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <a href="/tru/MentorInfo"
+              ><img
+                class="img-fluid"
+                src="https://picsum.photos/130/130?image=1027"
+            /></a>
+          </div>
+          <div class="team-content">
+            <h3 class="name">Michele Miller</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=839"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Patricia Knott</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=856"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Justin Ramos</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=836"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Mary Huntley</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=836"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Mary Huntley</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Arts</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <a href="/tru/MentorInfo"
+              ><img
+                class="img-fluid"
+                src="https://picsum.photos/130/130?image=1027"
+            /></a>
+          </div>
+          <div class="team-content">
+            <h3 class="name">Michele Miller</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=839"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Patricia Knott</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=856"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Justin Ramos</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=836"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Mary Huntley</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=836"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Mary Huntley</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Government Services</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <a href="/tru/MentorInfo"
+              ><img
+                class="img-fluid"
+                src="https://picsum.photos/130/130?image=1027"
+            /></a>
+          </div>
+          <div class="team-content">
+            <h3 class="name">Michele Miller</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=839"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Patricia Knott</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=856"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Justin Ramos</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=836"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Mary Huntley</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+        <div class="our-team">
+          <div class="picture">
+            <img
+              class="img-fluid"
+              src="https://picsum.photos/130/130?image=836"
+            />
+          </div>
+          <div class="team-content">
+            <h3 class="name">Mary Huntley</h3>
+            <h4 class="title">Web Developer</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

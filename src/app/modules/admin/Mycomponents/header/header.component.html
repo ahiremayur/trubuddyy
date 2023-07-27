@@ -1,0 +1,115 @@
+<!-- <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white justify-content-center" href="#">
+      <h1>TruBuddyy</h1>
+    </a>
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-white justify-content-center" aria-current="page" href="#">Mentors</a>
+        </li>
+        
+        <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle text-white justify-content-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            I AM A
+          </a>
+          <ul ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a ngbDropdownItem class="dropdown-item" href="#">8th-9th student</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="#">10th-12th</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="#">Graduate</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="#">Professional</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="#">Parent</a></li>
+            <li><a ngbDropdownItem class="dropdown-item" href="#">Another action</a></li>
+           
+          </ul>
+        </li>
+       
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav> -->
+
+<div class="full">
+    <nav class="navbar navbar-fixed">
+      <div class="lg">
+        <!-- LOGO -->
+        <a class="logo" href="tru/home"><b>TruBuddyy</b></a>
+  
+  
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+          <div class="main">
+            <li class="services">
+              <a class="dropdown-toggle">I AM A</a>
+  
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="tru/eightTOnine">8th-9th student </a></li>
+                <li><a href="tru/tenTOtwelth">10th-12th student</a></li>
+                <li><a href="tru/graduates">Collage Graduate</a></li>
+                <li><a href="tru/professional">Working Proffesional</a></li>
+                <li><a href="tru/parent">Parent</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="tru/mentors">MENTORS</a></li>
+            <li><a href="tru/HowItWorks">HOW IT WORKS</a></li>
+  
+            <li><a href="login" (click)="Logout()">{{login_logout_name}}</a></li>
+            <!-- <li><a href=""><i class="fa fa-fw fa-user"></i></a></li> -->
+  
+  
+          </div>
+        </ul>
+      </div>
+  
+      <div class="navLinks">
+        <!-- NAVIGATION MENU -->
+        <ul class="nav-links">
+          <!-- USING CHECKBOX HACK -->
+          <input type="checkbox" id="checkbox_toggle" />
+          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+  
+          <!-- NAVIGATION MENUS -->
+          <div class="menu">
+            <li class="services">
+              <a class="dropdown-toggle"><b>I AM A</b></a>
+  
+              <!-- DROPDOWN MENU -->
+              <ul class="dropdown">
+                <li><a href="tru/eightTOnine">8th-9th student </a></li>
+                <li><a href="tru/tenTOtwelth">10th-12th student</a></li>
+                <li><a href="tru/graduates">Collage Graduate</a></li>
+                <li><a href="tru/professional">Working Proffesional</a></li>
+                <li><a href="tru/parent">Parent</a></li>
+              </ul>
+            </li>
+  
+            <li><a href="tru/mentors"> <b> MENTORS</b></a></li>
+            <li><a href="tru/HowItWorks"><b> HOW IT WORKS</b></a></li>
+          </div>
+        </ul>
+      </div>
+      <div class="login-signup" (click)="Logout()">
+        <li >
+          <a href="login">
+            <b style="color: white;">{{login_logout_name}}</b>
+          </a>
+        </li>
+        
+      </div>
+      <div class="Profile">
+        <li><a href="tru/mentee_dashboard"><i class="fa fa-fw fa-user"></i></a></li>
+      </div>
+    </nav>
+  </div>
+  

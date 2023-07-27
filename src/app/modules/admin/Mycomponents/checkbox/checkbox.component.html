@@ -1,0 +1,17 @@
+<h2 style="margin-top: 8%;">Select a Date:</h2>
+<input type="date" [(ngModel)]="selectedDate" value="{{selectedDate}}" (change)="onDateChange()">
+
+<h2>Select Time Slots:</h2>
+<div *ngFor="let slot of timeSlots">
+  <input type="checkbox" [checked]="slot.selected" (change)="toggleTimeSlot(slot)">
+  {{ slot.time }}
+</div>
+
+<!-- <button (click)="makeRequest()">Make Request</button> -->
+
+<h2>Selected Date and Time Slots:</h2>
+<p>Date: {{ selectedDate }}</p>
+<p>Selected Time Slots:</p>
+<ul>
+  <li *ngFor="let slot of selectedTimeSlots">{{ slot.time }}</li>
+</ul>

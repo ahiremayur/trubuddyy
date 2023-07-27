@@ -1,0 +1,52 @@
+<h1>Add Image and Personal Information</h1>
+<form id="userInfoForm">
+  <label for="image" class="image">Image:</label>
+  <input type="file" id="profile_pic" accept="image/*"  (change)="onImageSelect($event)">
+  <br>
+  <br>
+  <label for="firstName">first Name:</label>
+  <input type="text" id="firstName" [value]="personalInfo.first_name"  required>
+  <br><br>
+  <label for="lastName">last Name:</label>
+  <input type="text" id="lastName" [value]="personalInfo.last_name" required>
+  <br>
+  <br>
+  <label for="dob">DOB:</label>
+  <input type="text" id="dob" [value]="personalInfo.dateOfBirth" required>
+  <br>
+  <br>
+  <label for="gender">Gender:</label>
+  <input type="text" id="gender" [value]="personalInfo.gender" required>
+  <br><br>
+  <label class="label" for="identity"
+  ><img
+    src=""
+    class="labelIcon"
+  /><span>I am a :</span></label
+>
+<select
+  type="text"
+  class="input"
+  id="identity"
+  placeholder="select your level"
+  [value]="personalInfo.i_am_a"
+>
+  <option value="student">Student</option>
+  <option value="graduate" >Graduate</option>
+  <option value="professional">Working Professional</option>
+  <option value="parent">Parent</option>
+
+</select>
+  <br>
+  <br>
+  <label for="address">Address:</label>
+  <input type="text" id="address" [value]="personalInfo.address" required>
+  <br><br>
+  <label for="ethnicity">Ethnicity:</label>
+  <input type="text" id="ethnicity" [value]="personalInfo.ethnicity" required>
+  <br><br>
+  <label for="nationality">Nationality:</label>
+  <input type="text" id="nationality" [value]="personalInfo.nationality" required>
+  <br><br>
+  <button type="button" (click)="submitForm()">SUBMIT</button>
+</form>

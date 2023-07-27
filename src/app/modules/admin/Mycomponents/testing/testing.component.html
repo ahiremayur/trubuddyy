@@ -1,0 +1,25 @@
+<form id="workExperienceForm">
+    <div class="work-experience" *ngFor="let experience of workExperiences; let i = index">
+        <h3>Work Experience {{ i + 1 }}</h3>
+        <div>
+            <label for="company{{ i }}">Company:</label>
+            <input type="text" id="company{{ i }}" >
+        </div>
+        <div>
+            <label for="job{{ i }}">Job:</label>
+            <input type="text" id="job{{ i }}">
+        </div>
+        <div>
+            <label for="description{{ i }}">Description:</label>
+            <input type="text" id="description{{ i }}">
+        </div>
+        <div>
+            <label for="duration{{ i }}">Duration:</label>
+            <input type="text" id="duration{{ i }}">
+        </div>
+        <button type="button" (click)="removeWorkExperience(i)">Remove Experience</button>
+    </div>
+
+    <button type="button" (click)="addWorkExperience()">Add Work Experience</button>
+    <button type="button" (click)="submitForm()">Submit</button>
+</form>

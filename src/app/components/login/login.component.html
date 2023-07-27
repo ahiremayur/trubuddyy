@@ -1,0 +1,60 @@
+<div class="LoginPageContainer">
+    <div class="LoginPageInnerContainer">
+      <div class="ImageContianer">
+        <img src="https://i.imgur.com/MYZd7of.png" class="GroupImage" />
+      </div>
+      <div class="LoginFormContainer">
+        <div class="LoginFormInnerContainer">
+          <div class="LogoContainer">
+            <!-- <img src="https://www.pngkey.com/png/full/529-5291672_sample-logo-png-transparent-background.png" class="logo"> -->
+          </div>
+          <header class="header">Log in</header>
+          <header class="subHeader">
+            Welcome to <b>Trubuddyy!</b> Please Enter your Details
+          </header>
+  
+          <form #logInForm="ngForm" (ngSubmit)="onSubmit(logInForm)">
+            <div class="inputContainer">
+              <label class="label" for="phone"
+                ><img
+                  src="data:image/png;base64,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"
+                  class="labelIcon"
+                /><span>Phone Number*</span></label
+              >
+              <input
+                type="phone"
+                class="input"
+                id="phone"
+                placeholder="Enter your Phone Number"
+              />
+            </div>
+            <div class="inputContainer">
+              <label class="label" for="emailAddress"
+                ><img
+                  src="https://i.imgur.com/g5SvdfG.png"
+                  class="labelIcon"
+                /><span>Password*</span></label
+              >
+              <input
+                type="password"
+                class="input"
+                id="password"
+                placeholder="Enter your Password"
+              />
+            </div>
+            <div class="OptionsContainer">
+              <div class="checkboxContainer">
+                <input type="checkbox" id="RememberMe" class="checkbox" />
+                <label for="RememberMe">Remember me</label>
+              </div>
+              <a href="#" class="ForgotPasswordLink">Forgot Password?</a>
+            </div>
+            <button class="LoginButton" type="submit">Login</button>
+            
+          </form>
+          <h5>don't have an account?, Please <a href="signup"> SIGNUP </a></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+  

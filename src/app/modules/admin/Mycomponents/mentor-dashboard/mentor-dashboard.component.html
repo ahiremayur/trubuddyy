@@ -1,0 +1,180 @@
+<div class="card">
+  <img src="profile-picture.jpg" alt="" />
+  <img
+    src={{userData.profile_pic}}
+    alt=""
+    class="card-image"
+  />
+  <div class="profile-info">
+    <h2>{{userData.first_name}} {{userData.last_name}}</h2>
+    <!-- <p>Mentor</p> -->
+    <p>Phone: {{userData.username}}</p>
+    <p>Email: {{userData.email}}</p>
+    <br><br>
+	  <button><a href="tru/my-profile" style="color: white; text-decoration: none;">My Profile</a></button>
+
+  </div>
+</div>
+
+<h2 style="margin-top: 2%;">Select a Date:</h2>
+<input type="date" [(ngModel)]="selectedDate" value="{{selectedDate}}" (change)="onDateChange()">
+
+<h2>Select Time Slots:</h2>
+<div *ngFor="let slot of timeSlots">
+  <input type="checkbox" [checked]="slot.selected" (change)="toggleTimeSlot(slot, id)">
+  {{ slot.time }}
+</div>
+
+<!-- <button (click)="makeRequest()">Make Request</button> -->
+
+<h2>Selected Date and Time Slots:</h2>
+<p>Date: {{ selectedDate }}</p>
+<p>Selected Time Slots:</p>
+<ul>
+  <li *ngFor="let slot of selectedTimeSlots">{{ slot.time }}</li>
+</ul>
+
+<h2 style="text-align: center">Previous Sessions</h2>
+
+<table class="responsive-table">
+  <thead class="responsive-table__head">
+    <tr class="responsive-table__row">
+      <th
+        class="responsive-table__head__title responsive-table__head__title--name"
+      >
+        Month
+      </th>
+      <th
+        class="responsive-table__head__title responsive-table__head__title--status"
+      >
+        Date
+      </th>
+      <th
+        class="responsive-table__head__title responsive-table__head__title--types"
+      >
+        Day
+      </th>
+      <th
+        class="responsive-table__head__title responsive-table__head__title--update"
+      >
+        time
+      </th>
+      <th
+        class="responsive-table__head__title responsive-table__head__title--country"
+      >
+        Mentee Name
+      </th>
+    </tr>
+  </thead>
+
+  <tbody class="responsive-table__body">
+    <tr class="responsive-table__row">
+      <td
+        class="responsive-table__body__text responsive-table__body__text--name"
+      >
+        May
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--status"
+      >
+        14
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--types"
+      >
+        Monday
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--update"
+      >
+        7:00pm
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--country"
+      >
+        Anu Jain
+      </td>
+    </tr>
+    <tr class="responsive-table__row">
+      <td
+        class="responsive-table__body__text responsive-table__body__text--name"
+      >
+        May
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--status"
+      >
+        14
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--types"
+      >
+        monday
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--update"
+      >
+        8:00pm
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--country"
+      >
+        Pulkit
+      </td>
+    </tr>
+    <tr class="responsive-table__row">
+      <td
+        class="responsive-table__body__text responsive-table__body__text--name"
+      >
+        May
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--status"
+      >
+        14
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--types"
+      >
+        monday
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--update"
+      >
+        8:00pm
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--country"
+      >
+        Pulkit
+      </td>
+    </tr>
+    <tr class="responsive-table__row">
+      <td
+        class="responsive-table__body__text responsive-table__body__text--name"
+      >
+        May
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--status"
+      >
+        14
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--types"
+      >
+        monday
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--update"
+      >
+        8:00pm
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--country"
+      >
+        Pulkit
+      </td>
+    </tr>
+  </tbody>
+</table>

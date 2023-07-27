@@ -1,0 +1,127 @@
+body {
+    background: #b4c523f0;
+    background: linear-gradient(to right, #9c972b, #fcf960);
+  }
+  
+  .bg-image {
+    background-image: url('https://source.unsplash.com/kKvQJ6rK6S4/660x1000');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .flex-container {
+    display: flex;
+}
+
+.flex-child  {
+    /* flex: 1;
+    border: 2px solid yellow;
+    background-color: #f8c175;
+    height: 20vh; */
+    /* margin-top: 8%; */
+    /* margin: auto; */
+    /* margin-left: 18%; */
+    /* text-align: center; */
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+h2{
+  /* text-align: center; */
+  margin-left: 10%;
+  margin-bottom: 3%;
+  margin-top: 8%;
+}
+
+@media (max-width:768px){
+  h2{
+    margin-top: 22%;
+  }
+}
+
+.Gp h2{
+  margin-top: 0%;
+}
+
+.box1{
+  flex: 1;
+    border: 2px solid yellow;
+    background-color: #f5c88a;
+    height: 22vh;
+    width: 25vh;
+    margin-left: 10%;
+    margin-right: 2%;
+    /* text-align: center; */
+    padding-left: 1%;
+    border-radius: 15px;
+}
+.box2{
+  flex: 1;
+    border: 2px solid yellow;
+    background-color: #f9c985;
+    height: 22vh;
+    margin-right: 10%;
+    margin-left: 2%;
+    /* text-align: center; */
+    padding-left: 1%;
+    border-radius: 15px;
+    padding-right: 1%;
+}
+
+/* .flex-container :hover{
+  border: 2px solid rgb(45, 129, 239);
+
+} */
+
+.form{
+  margin-top: 3%;
+}
+
+.card-container {
+  display: flex;
+}
+
+.card1 {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* margin-right: 10px; */
+  margin-left: 8%;
+  background-color: #f7b75e;
+}
+
+.card2 {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* margin-right: 10px; */
+  margin-right: 8%;
+  margin-left: 2%;
+  background-color: #f7b75e;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+@media (max-width:768px){
+  .card1{
+    margin-left: 2%;
+    margin-right: 1%;
+    width: 100%;
+  }
+  .card2{
+    /* margin-right: 2.5%; */
+    width: 100%;
+    margin-right: 4%;
+  }
+}
+
+.card-container h2{
+  margin-left: 0;
+}
