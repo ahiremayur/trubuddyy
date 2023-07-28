@@ -2,7 +2,9 @@ export interface workexpDataModel {
     company: string;
     job:string;
     description:string;
-    duration:string;   
+    duration:string; 
+    id: number;
+    user_id: number;  
 }
 
 export interface timeDataModel {
@@ -27,10 +29,59 @@ export interface SearchModel {
 
 export interface InfoModel {
     name: string;
-    higher_education:{
-     
-    };
-    
+    higher_education:[
+        {
+            id: number,
+            user_id: number,
+            qualification:string,
+            degree: string,
+            marks: string,
+            school: string,
+            year: string,
+          },
+
+          {
+            id: number,
+            user_id: number,
+            qualification: string,
+            degree: string,
+            marks: string,
+            school: string,
+            year: string,
+          },
+          {
+            id: number,
+            user_id: number,
+            qualification: string,
+            degree:string,
+            marks: string,
+            school: string,
+            year: string,
+          },
+    ];
+
+    school_education:[
+        {
+            id: number,
+            user_id: number,
+            qualification:string,
+            degree: string,
+            marks: string,
+            school: string,
+            year: string,
+          },
+
+          {
+            id: number,
+            user_id: number,
+            qualification: string,
+            degree: string,
+            marks: string,
+            school: string,
+            year: string,
+          },
+        
+    ];
     marks: string;
     degree: string;
     board: string;

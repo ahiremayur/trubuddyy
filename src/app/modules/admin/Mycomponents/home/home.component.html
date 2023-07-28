@@ -51,82 +51,62 @@
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <a href="/tru/MentorInfo"
+                <a (click)="showPersonDetails(items[0].id)"
                   ><img
                     class="img-fluid"
-                    src="https://picsum.photos/130/130?image=1027"
+                    src="{{'data:image/jpeg;base64,'+items[0].profile_pic}}"
                 /></a>
               </div>
               <div class="team-content">
-                <h3 class="name">Michele Miller</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">{{ items[0].full_name }}</h3>
+                <h4 class="title">{{ items[0].job }}</h4>
               </div>
-              <!-- <ul class="social">
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
-            </ul> -->
+         
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img
+                <img (click)="showPersonDetails(items[1].id)"
                   class="img-fluid"
-                  src="https://picsum.photos/130/130?image=839"
+                  src="{{'data:image/jpeg;base64,'+items[1].profile_pic}}"
                 />
               </div>
               <div class="team-content">
-                <h3 class="name">Patricia Knott</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">{{ items[1].full_name }}</h3>
+                <h4 class="title">{{ items[1].job }}</h4>
               </div>
-              <!-- <ul class="social">
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
-            </ul> -->
+           
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img
+                <img (click)="showPersonDetails(items[0].id)"
                   class="img-fluid"
-                  src="https://picsum.photos/130/130?image=856"
+                  src="{{'data:image/jpeg;base64,'+items[0].profile_pic}}"
                 />
               </div>
               <div class="team-content">
-                <h3 class="name">Justin Ramos</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">{{ items[0].full_name }}</h3>
+                <h4 class="title">{{ items[0].job }}</h4>
               </div>
-              <!-- <ul class="social">
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
-            </ul> -->
+           
             </div>
           </div>
           <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="our-team">
               <div class="picture">
-                <img
+                <img (click)="showPersonDetails(items[1].id)"
                   class="img-fluid"
-                  src="https://picsum.photos/130/130?image=836"
+                  src="{{'data:image/jpeg;base64,'+items[1].profile_pic}}"
                 />
               </div>
               <div class="team-content">
-                <h3 class="name">Mary Huntley</h3>
-                <h4 class="title">Web Developer</h4>
+                <h3 class="name">{{ items[1].full_name }}</h3>
+                <h4 class="title">{{ items[1].job }}</h4>
               </div>
-              <!-- <ul class="social">
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-facebook" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-twitter" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-google-plus" aria-hidden="true"></a></li>
-              <li><a href="https://codepen.io/collection/XdWJOQ/" class="fa fa-linkedin" aria-hidden="true"></a></li>
-            </ul> -->
+          
             </div>
           </div>
         </div>

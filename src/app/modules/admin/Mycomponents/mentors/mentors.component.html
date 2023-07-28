@@ -24,14 +24,16 @@
   <button type="submit" (click)="onSearchSubmit()">Search</button>
 </form>
 
-<h2>Science</h2>
 
-<div class="container">
+
+<div class="container " style="margin-top: 3%;">
+  <div class="row col-12 col-sm-6 col-md-4 col-lg-3">
   <div *ngFor="let item of items">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+    
+      <div class="">
         <div class="our-team" >
           <div class="picture">
+            
             <a (click)="showPersonDetails(item.id)"
               ><img
                 class="img-fluid"
@@ -47,7 +49,8 @@
       </div>
     </div>
   </div>
-  <h2>Commerce</h2>
+
+  <!-- <h2>Commerce</h2>
 
   <div class="container">
     <div class="row">
@@ -123,161 +126,5 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <h2>Arts</h2>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <a href="/tru/MentorInfo"
-              ><img
-                class="img-fluid"
-                src="https://picsum.photos/130/130?image=1027"
-            /></a>
-          </div>
-          <div class="team-content">
-            <h3 class="name">Michele Miller</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=839"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Patricia Knott</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=856"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Justin Ramos</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=836"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Mary Huntley</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=836"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Mary Huntley</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h2>Government Services</h2>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <a href="/tru/MentorInfo"
-              ><img
-                class="img-fluid"
-                src="https://picsum.photos/130/130?image=1027"
-            /></a>
-          </div>
-          <div class="team-content">
-            <h3 class="name">Michele Miller</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=839"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Patricia Knott</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=856"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Justin Ramos</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=836"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Mary Huntley</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="our-team">
-          <div class="picture">
-            <img
-              class="img-fluid"
-              src="https://picsum.photos/130/130?image=836"
-            />
-          </div>
-          <div class="team-content">
-            <h3 class="name">Mary Huntley</h3>
-            <h4 class="title">Web Developer</h4>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </div> -->
 </div>

@@ -50,11 +50,15 @@ company!:string
       }
     );
 
-    this.http.get<workexpDataModel[]>(CONFIG['serverURL']+'/user/viewmyworkexpURL', { headers }).subscribe(
-      (response:workexpDataModel[]) => {
+    this.http.get<any>(CONFIG['serverURL']+'/user/viewmyworkexpURL', { headers }).subscribe(
+      (response) => {
        
-        console.log(response)
-        this.workData = response;
+        var workExperienceArray = []
+        for (const items of response){
+          workExperienceArray.push(items)
+        }
+        console.log(workExperienceArray)
+        this.workData = workExperienceArray;
       },
       (error) => {
         
