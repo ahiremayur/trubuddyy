@@ -7,7 +7,7 @@ import { CancelComponent } from './components/payment/cancel/cancel.component';
 const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'payment/success/', component: SuccessComponent},
+  {path: 'payment/success', component: SuccessComponent},
   {path: 'payment/cancel', component: CancelComponent},
   {path: 'tru', loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule)}
 ];

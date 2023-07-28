@@ -101,6 +101,7 @@ selectSlot(slot:any){
 }
 
 startBookingProcess(){
+  if (this.selectedSlot.length<10) return
   const accessToken = getAccessToken();
   const headers = new HttpHeaders({
     'Authorization': `Token ${accessToken}`
