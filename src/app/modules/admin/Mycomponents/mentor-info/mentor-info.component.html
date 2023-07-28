@@ -38,21 +38,14 @@
                     <td>:</td>
                     <td>{{person.higher_education[0].school}}</td>
                   </tr>
+  <div *ngFor="let experience of workData">
+
                   <tr>
                     <td>Experiances</td>
                     <td>:</td>
-                    <td>----</td>
+                    <td>{{experience.company}}</td>
                   </tr>
-                  <!-- <tr>
-                    <td>Job</td>
-                    <td>:</td>
-                    <td>Web Developer</td>
-                  </tr> -->
-                  <!-- <tr>
-                    <td>Skill</td>
-                    <td>:</td>
-                    <td>PHP, HTML, CSS, Java</td>
-                  </tr> -->
+  </div>
                 </tbody>
               </table>
             </div>

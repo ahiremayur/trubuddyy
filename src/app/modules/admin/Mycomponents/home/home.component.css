@@ -47,10 +47,10 @@ body {
     margin: 0;
     align-items: center;
     justify-content: center;
-    background-color: #bfdfec;
+    /* background-color: #bfdfec; */
     font-family: system-ui, calibri, serif;
     background-repeat: repeat-x;
-    background-image: url("../../../../../assets/main_page.mp4");
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReXErzBS7diUM2lu4rTnNbst2v_eFbbgAyiYTx7k3MFA&s"); */
     animation: movement 10s linear infinite;
   }
   
@@ -62,6 +62,99 @@ body {
       background-position: 560px 0px;
     }
   }
+
+  /* new  */
+  .callout {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    width: 70%;
+    margin:auto;
+   
+  }
+
+  .outter.hero-video{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    
+  }
+  @media (max-width: 767px) {
+    .outter.hero-video{
+    height: 400px;}
+  }
+  
+  /* .hero-video { */
+    
+  .video-container {
+    height: 550px;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+   
+  }
+  @media (max-width: 767px) {
+    .video-container{
+    height: 400px;}
+  }
+  
+  video {
+    object-fit: cover; 
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+  }
+
+  @media (max-width: 767px) {
+    video{
+    height: 400px;}
+  }
+  
+  
+  .video-container:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(black, .2);
+    z-index: 1;
+  }
+  
+  h1 {
+    /* text-transform: uppercase; */
+    margin: 0 0 1rem;
+    padding: 0;
+    line-height: 1;
+    color: white;
+   
+  }
+  @media (max-width: 767px) {
+    h1{
+    /* font-size: 32px; */
+    margin-top: 10%;
+    font-size: 26px
+      }
+ }
+
+  @media (min-width: 768px) {
+    h1{
+    font-size: 52px;}
+  }
+
 
 
   /*circles css background*/

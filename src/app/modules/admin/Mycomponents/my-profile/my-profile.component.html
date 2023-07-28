@@ -4,84 +4,96 @@
   <img
     class="user-info__image"
     id="previewImage"
-    src={{personalInfoData.profile_pic}}
+    src="{{ personalInfoData.profile_pic }}"
     alt="Preview Image"
   />
   <div class="user-info__details">
-    <P id="fullName">NAME : {{personalInfoData.first_name}} {{personalInfoData.last_name}}</P>
-    <p id="age">DOB : {{personalInfoData.dateOfBirth}}</p>
-    <p id="gender">GENDER : {{personalInfoData.gender}}</p>
-    <p id="address">ADDRESS :{{personalInfoData.address}}</p>
-    <p id="ethnicity">ETHNICITY : {{personalInfoData.ethnicity}}</p>
-    <p id="nationality">NATIONALITY : {{personalInfoData.nationality}}</p>
-    <br><br>
-    <button class="edit" type="button"><a href="tru/personal_info_form" style="color: white; text-decoration: none;"><span class="edit-icon"></span><span>Edit</span></a></button>
-
+    <P id="fullName"
+      >NAME : {{ personalInfoData.first_name }}
+      {{ personalInfoData.last_name }}</P
+    >
+    <p id="age">DOB : {{ personalInfoData.dateOfBirth }}</p>
+    <p id="gender">GENDER : {{ personalInfoData.gender }}</p>
+    <p id="address">ADDRESS :{{ personalInfoData.address }}</p>
+    <p id="ethnicity">ETHNICITY : {{ personalInfoData.ethnicity }}</p>
+    <p id="nationality">NATIONALITY : {{ personalInfoData.nationality }}</p>
+    <br /><br />
+    <button class="edit" type="button">
+      <a
+        href="tru/personal_info_form"
+        style="color: white; text-decoration: none"
+        ><span class="edit-icon"></span><span>Edit</span></a
+      >
+    </button>
   </div>
-
 </div>
 
 <div class="official_info">
   <details class="accordion">
     <summary class="accordion__title">1OTH STANDARD</summary>
     <div class="accordion__content">
-      <p>BOARD :{{school10Data.board}}  </p>
-      <P>SCHOOL : {{school10Data.school}} </P>
-      <P>MARKS : {{school10Data.marks}}</P>
-      <P>YEAR : {{school10Data.year}}</P>
+      <p>BOARD :{{ school10Data.board }}</p>
+      <P>SCHOOL : {{ school10Data.school }} </P>
+      <P>MARKS : {{ school10Data.marks }}</P>
+      <P>YEAR : {{ school10Data.year }}</P>
     </div>
   </details>
   <details class="accordion">
     <summary class="accordion__title">12TH STANDARD</summary>
     <div class="accordion__content">
-      <p>BOARD :{{school12Data.board}}</p>
-      <P>SCHOOL : {{school12Data.school}} </P>
-      <P>MARKS : {{school12Data.marks}}</P>
-      <P>YEAR : {{school12Data.year}}</P>
+      <p>BOARD :{{ school12Data.board }}</p>
+      <P>SCHOOL : {{ school12Data.school }} </P>
+      <P>MARKS : {{ school12Data.marks }}</P>
+      <P>YEAR : {{ school12Data.year }}</P>
     </div>
   </details>
   <details class="accordion">
     <summary class="accordion__title">GRADUATION</summary>
     <div class="accordion__content">
-      <p>DEGREE : {{schoolgradData.degree}}</p>
-      <P>UNIVERSITY : {{schoolgradData.school}}</P>
-      <P>MARKS : {{schoolgradData.marks}}</P>
-      <P>YEAR : {{schoolgradData.year}}</P>
+      <p>DEGREE : {{ schoolgradData.degree }}</p>
+      <P>UNIVERSITY : {{ schoolgradData.school }}</P>
+      <P>MARKS : {{ schoolgradData.marks }}</P>
+      <P>YEAR : {{ schoolgradData.year }}</P>
     </div>
   </details>
   <details class="accordion">
     <summary class="accordion__title">POST GRADUATION</summary>
     <div class="accordion__content">
-      <p>DEGREE : {{schoolpostgradData.degree}}</p>
-      <P>UNIVERSITY : {{schoolpostgradData.school}}</P>
-      <P>MARKS : {{schoolpostgradData.marks}}</P>
-      <P>YEAR : {{schoolpostgradData.year}}</P>
+      <p>DEGREE : {{ schoolpostgradData.degree }}</p>
+      <P>UNIVERSITY : {{ schoolpostgradData.school }}</P>
+      <P>MARKS : {{ schoolpostgradData.marks }}</P>
+      <P>YEAR : {{ schoolpostgradData.year }}</P>
     </div>
   </details>
   <details class="accordion">
     <summary class="accordion__title">PROFESSIONAL DEGREE</summary>
     <div class="accordion__content">
-      <p>DEGREE : {{schoolprofData.degree}}</p>
-      <P>CONDUCTING BODY : {{schoolprofData.school}} </P>
-      <P>MARKS : {{schoolprofData.school}}</P>
-      <P>YEAR : {{schoolprofData.school}}</P>
+      <p>DEGREE : {{ schoolprofData.degree }}</p>
+      <P>CONDUCTING BODY : {{ schoolprofData.school }} </P>
+      <P>MARKS : {{ schoolprofData.school }}</P>
+      <P>YEAR : {{ schoolprofData.school }}</P>
     </div>
   </details>
 
   <h2 style="text-align: center">WORK EXPERIENCE</h2>
-<div *ngFor="let experience of workData">
-  <details class="accordion">
-    <summary class="accordion__title">COMPANY NAME : {{experience.company}}</summary>
-    <div class="accordion__content">
-      <P>JOB TITLE : </P>
-      <P>JOB DESCRIPTION :</P>
-      <P>DURATION : </P>
-    </div>
-  </details>
-</div>
-  <br><br>
-  <button class="edit" type="button" style="margin-left: 45%;"><a href="tru/job_education_form" style="color: white; text-decoration: none; "><span class="edit-icon"></span><span>Edit</span></a></button>
-
+  <div *ngFor="let experience of workData">
+    <details class="accordion">
+      <summary class="accordion__title">
+        COMPANY NAME : {{ experience.company }}
+      </summary>
+      <div class="accordion__content">
+        <P>JOB TITLE : {{experience.job}}</P>
+        <P>JOB DESCRIPTION : {{experience.description}}</P>
+        <P>DURATION :{{experience.duration}} </P>
+      </div>
+    </details>
+  </div>
+  <br /><br />
+  <button class="edit" type="button" style="margin-left: 45%">
+    <a href="tru/job_education_form" style="color: white; text-decoration: none"
+      ><span class="edit-icon"></span><span>Edit</span></a
+    >
+  </button>
 </div>
 <!-- <a href=="" target="_blank">Read the related article</a> -->
 

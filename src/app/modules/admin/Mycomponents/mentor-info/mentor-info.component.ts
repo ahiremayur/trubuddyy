@@ -12,6 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MentorInfoComponent implements OnInit {
   person!: InfoModel;
+  workData:InfoModel[]=[];
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -22,6 +23,7 @@ export class MentorInfoComponent implements OnInit {
     this.route.params.subscribe(params => {
       const personId = +params['id']; // Get the person ID from the route parameter
       this.getPersonData(personId);
+      this.getWorkData(personId)
     });
   }
 
@@ -32,6 +34,25 @@ export class MentorInfoComponent implements OnInit {
         (response: InfoModel) => {
          this.person = response;
          console.log(response)
+         
+        },
+        error => {
+          console.error('Error fetching person data:', error);
+        }
+      );
+  }
+
+  getWorkData(id: number) {
+    const apiUrl = CONFIG['serverURL']+'/user/public-mentor-details'; 
+    this.http.get<any>(`${apiUrl}/${id}`)
+      .subscribe(
+        (response) => {
+          var workExperienceArray = []
+          for (const items of response){
+            workExperienceArray.push(items)
+          }
+          console.log(workExperienceArray)
+          this.workData = workExperienceArray;
         },
         error => {
           console.error('Error fetching person data:', error);

@@ -250,6 +250,7 @@ body{
     height: 326px;}
   }
   
+  
   .video-container:after {
     content: '';
     display: block;

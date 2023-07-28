@@ -82,11 +82,20 @@ export interface InfoModel {
           },
         
     ];
+  
+      board: string;
+      company: string;
+      job: string;
+      // id: number;
+      
+    
     marks: string;
     degree: string;
-    board: string;
-    company: string;
-    job: string;
-    id: number;
+  
     profile_pic: string;
+    description:string;
+    duration:string; 
+    user_id: number;
+    id: number;
+
  }

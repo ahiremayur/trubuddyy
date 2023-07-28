@@ -49,8 +49,10 @@ company!:string
         console.error(error);
       }
     );
+    const viewmyworkexpURL = CONFIG['serverURL']+"/user/viewmyworkexp/"
 
-    this.http.get<any>(CONFIG['serverURL']+'/user/viewmyworkexpURL', { headers }).subscribe(
+
+    this.http.get<any>(viewmyworkexpURL, { headers }).subscribe(
       (response) => {
        
         var workExperienceArray = []
@@ -59,6 +61,9 @@ company!:string
         }
         console.log(workExperienceArray)
         this.workData = workExperienceArray;
+
+        // console.log(response)
+        // this.workData = response
       },
       (error) => {
         
