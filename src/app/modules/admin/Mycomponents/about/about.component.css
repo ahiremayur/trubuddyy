@@ -1,17 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 .content {
     height: 100%;
     /* display: flex; */
     align-items: center;
     padding: 35px 0px;
-    margin-left: 5%;
+    /* margin-left: 5%; */
   }
   .img {
     min-height: 320px;
     height: 80%;
     border-radius: 10px;
     width: 75%;
-    margin-left: 5%;
-    /* margin-right: 5%; */
+    margin-left: 1%;
   }
   .content p {
     font-size: 56px;
@@ -21,17 +21,16 @@
   }
 
 .boxFloat{
-   /* margin-top: 5%; */
    margin-left: 3%;
    margin-right: 3%;
 }
 
 .head{
  text-align: center;  
- margin-top: 2%; 
+ /* margin-top: 2%;  */
 }
-.row{
-    margin-bottom: 5%;
+.boxFloat .row{
+    /* margin-bottom: 5%; */
 }
 
 .text p{
@@ -39,12 +38,11 @@
     text-align: center;
 }
 
-
-
 html
 {
-	padding: 0 1em;
-	font-family: Calibri, sans-serif;
+	padding: 0 10px;
+	/* font-family: Calibri, sans-serif; */
+  font-family: Gilroy,-apple-system,BlinkMacSystemFont,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif!important;
 }
 
 body
@@ -55,19 +53,23 @@ body
 
 img
 {
-	max-width: 100%;
+	/* max-width: 100%; */
   
 }
 .wording p{
-    font-size: 20px;
-    margin-left: 8%;
+    font-size: 18px;
+    margin-left: 3%;
+    
+}
+
+.wording{
+ 
 }
 
 .image
 {
-	margin: 1em 0;
-    margin-left: 10%;
-    margin-right: 10%;
+
+    
 }
 
 @media (min-width: 768px)
@@ -77,10 +79,13 @@ img
 		display: flex;
 		align-items: center;
 	}
+  .one{
+    /* background-color: aqua; */
+  }
 
 	.image img
 	{
-		margin-right: 1em;
+		/* margin-right: 1%; */
 		float: left; 
 	}
 	.image::after
@@ -107,36 +112,44 @@ img
 }
 
 .bg{
-    background-color: rgb(247, 204, 95);
+    background-color: #f19a70;
     display: flex;
     /* flex-direction: column; */
+
+    padding-top: 45px;
+    margin-top: 1%;
+    padding-bottom: 20px;
+}
+
+.team{
+  padding-bottom: 3%;
 }
 
 .team-img img {
-    width: 100%;
+    /* width: 100%;
     transform: scale(1);
-    transition: all 0.6s ease-out 0s;
+    transition: all 0.6s ease-out 0s; */
   }
   .team-img {
     overflow: hidden;
   }
-  img{
-    border-radius: 100%;
-    clip-path: circle();
+  .team img{
+    border-radius: 5px;
+    /* clip-path: circle(); */
   }
   .team-div{
     text-align: center;
   }
 .row{
-    margin-left: 10%;
+    /* margin-left: 10%; */
     margin-right: 10%;
 }
 .col-md-3{
     margin-top: 4%;
 }
 .team h1{
-    margin-top: 4%;
-    text-align: center;
+    /* margin-top: 4%;
+    text-align: center; */
 }
 
 .half-half-image-text{

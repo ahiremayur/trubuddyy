@@ -9,6 +9,10 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  
+}
+.one{
+  margin-top: 10vh;
 }
 
 .title {
@@ -26,7 +30,7 @@ body {
   text-align: center;
   animation: changeBackgroundColor 7s infinite;
   /* margin-bottom: 1%; */
-  margin-top: 0.5%;  
+  /* margin-top: 0.5%;   */
 }
 
 @keyframes changeBackgroundColor {
@@ -99,6 +103,7 @@ body {
     width:100%;
     position: relative;
     overflow: hidden;
+    top: 0;
    
   }
   @media (max-width: 767px) {
@@ -154,8 +159,6 @@ body {
     h1{
     font-size: 52px;}
   }
-
-
 
   /*circles css background*/
   
@@ -315,7 +318,7 @@ body {
 }
 
 .back{
-  background-color: #feaca8;
+  background-color: #E2EED9;
   margin-top: 6.5%;
 }
 
@@ -412,7 +415,7 @@ a{
 
 
 .feedback{
-  background-color: #f6f1f1;
+  background-color: #f8f7f2;
   padding-top: 4%;
   /* align-items: center; */
   /* justify-content: center; */
@@ -448,8 +451,8 @@ a{
 }
 
 .testimonial-cards:hover {
-  background: black;
-  color: white;
+  background: #FDF2EF;
+  /* color: white; */
   border: 5px solid white;
   transform: scale(1.1);
   transition: all 0.5s ease;

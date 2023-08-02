@@ -1,56 +1,73 @@
-<p>
-  <b
-    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, nam. Deserunt
-    quia cum praesentium earum autem. Dicta sit enim molestiae corrupti
-    temporibus, dolor, accusamus nulla soluta ut, culpa sequi et voluptatum
-    quod. Maiores, illum? Aliquam, vero? Neque possimus voluptatum est, quos,
-    sunt assumenda qui in aspernatur veritatis provident soluta nemo.</b
+<div style="background-color: #dbd1fc">
+  <h1 style=" margin-top: 10vh;
+  text-align: center;">Meet Our Mentors!</h1>
+  <h4
+    style="
+      margin-top: 5vh;
+      text-align: center;
+      margin-left: 1%;
+      margin-bottom: 2%;
+      color: rgb(129, 40, 22);
+    "
   >
-</p>
+    <b
+      style="
+        font-family: Gilroy, -apple-system, BlinkMacSystemFont, Oxygen, Ubuntu,
+          Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif !important;
+      "
+      >Grow and Learn with the guidance from our community of world class
+      professionals working as mentors to help you in your career journey.</b
+    >
+  </h4>
 
-<form>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name" [(ngModel)]="name" />
+  <form style="text-align: center">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" [(ngModel)]="name" />
 
-  <label for="job">Profession:</label>
-  <input type="text" id="job" name="job" [(ngModel)]="job" />
+    <label style="padding-left: 3%" for="job">Profession</label>
+    <input type="text" id="job" name="job" [(ngModel)]="job" />
 
-  <label for="degree">Degree:</label>
-  <input type="text" id="degree" name="degree" [(ngModel)]="degree" />
+    <label style="padding-left: 3%" for="degree">Degree</label>
+    <input type="text" id="degree" name="degree" [(ngModel)]="degree" />
 
-  <label for="company">Company:</label>
-  <input type="text" id="company" name="company" [(ngModel)]="company" />
+    <label style="padding-left: 3%" for="company">Company </label>
+    <input type="text" id="company" name="company" [(ngModel)]="company" />
 
-  <button type="submit" (click)="onSearchSubmit()">Search</button>
-</form>
+    <button
+      style="padding-left: 1.5%; background-color: #ffff"
+      type="submit"
+      (click)="onSearchSubmit()"
+    >
+      Search
+    </button>
+  </form>
 
-
-
-<div class="container " style="margin-top: 3%;">
-  <div class="row " >
+  <div class="container" style="margin-top: 3%">
+    <div class="row">
       <div class="row">
-  <div *ngFor="let item of items" class="row col-12 col-sm-6 col-md-4 col-lg-3" style="margin-right: 1%;">
-
-        <div class="our-team" >
-          <div class="picture">
-            
-            <a (click)="showPersonDetails(item.id)"
-              ><img
-                class="img-fluid"
-                src="{{'data:image/jpeg;base64,'+item.profile_pic}}"
-                
-            /></a>
-          </div>
-          <div class="team-content">
-            <h3 class="name">{{ item.full_name }}</h3>
-            <h4 class="title">{{ item.job }}</h4>
+        <div
+          *ngFor="let item of items"
+          class="row col-12 col-sm-6 col-md-4 col-lg-3"
+          style="margin-right: 1%"
+        >
+          <div class="our-team">
+            <div class="picture">
+              <a (click)="showPersonDetails(item.id)"
+                ><img
+                  class="img-fluid"
+                  src="{{ 'data:image/jpeg;base64,' + item.profile_pic }}"
+              /></a>
+            </div>
+            <div class="team-content">
+              <h3 class="name">{{ item.full_name }}</h3>
+              <h4 class="title">{{ item.job }}</h4>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- <h2>Commerce</h2>
+    <!-- <h2>Commerce</h2>
 
   <div class="container">
     <div class="row">
@@ -127,4 +144,5 @@
       </div>
     </div>
   </div> -->
+  </div>
 </div>

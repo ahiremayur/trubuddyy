@@ -1,10 +1,10 @@
-<div class="Fullcard">
-  <div class="boxFloat">
+<div class="Fullcard" style="background-color: #f6cfcf;">
+  <div class="boxFloat" >
     <div class="row"></div>
     <div class="">
       <div class="content">
         <div class="main">
-          <div class="card">
+          <div class="card" style="margin-top: 2%;">
             <div >
               <a 
               ><img
@@ -38,14 +38,16 @@
                     <td>:</td>
                     <td>{{person.higher_education[0].school}}</td>
                   </tr>
-  <div *ngFor="let experience of workData">
+
 
                   <tr>
                     <td>Experiances</td>
+                    <div *ngFor="let experience of workData">
                     <td>:</td>
                     <td>{{experience.company}}</td>
+                  </div>
                   </tr>
-  </div>
+
                 </tbody>
               </table>
             </div>

@@ -5,7 +5,6 @@ import { schoolgradDataModel } from 'src/app/utilities/models/schoolData';
 import { schoolpostgradDataModel } from 'src/app/utilities/models/schoolData';
 import { schoolprofDataModel } from 'src/app/utilities/models/schoolData';
 import { MenteeDataModel } from 'src/app/utilities/models/userdata';
-
 import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { getAccessToken } from 'src/app/utilities/token-handler';

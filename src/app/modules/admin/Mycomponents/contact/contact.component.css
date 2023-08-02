@@ -1,6 +1,7 @@
 body {
     background: #b4c523f0;
     background: linear-gradient(to right, #9c972b, #fcf960);
+    font-family: 'Gilroy,-apple-system,BlinkMacSystemFont,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Arial,sans-serif!important';
   }
   
   .bg-image {
@@ -10,8 +11,12 @@ body {
     background-repeat: no-repeat;
   }
 
+
   .flex-container {
     display: flex;
+}
+.back{
+  background-color: #FFEBCD;
 }
 
 .flex-child  {
@@ -29,11 +34,11 @@ body {
     margin-right: 20px;
 } 
 
-h2{
+h1{
   /* text-align: center; */
   margin-left: 10%;
   margin-bottom: 3%;
-  margin-top: 8%;
+  margin-top: 10vh;
 }
 
 @media (max-width:768px){
@@ -49,7 +54,7 @@ h2{
 .box1{
   flex: 1;
     border: 2px solid yellow;
-    background-color: #f5c88a;
+    background-color: #f4f1ee;
     height: 22vh;
     width: 25vh;
     margin-left: 10%;
@@ -61,7 +66,7 @@ h2{
 .box2{
   flex: 1;
     border: 2px solid yellow;
-    background-color: #f9c985;
+    background-color: #f3eee7;
     height: 22vh;
     margin-right: 10%;
     margin-left: 2%;
@@ -86,23 +91,23 @@ h2{
 
 .card1 {
   flex: 1;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  /* margin-right: 10px; */
   margin-left: 8%;
-  background-color: #f7b75e;
+  background-color: #ffff;
+  border: 2px solid black;
 }
 
 .card2 {
   flex: 1;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  /* margin-right: 10px; */
   margin-right: 8%;
   margin-left: 2%;
-  background-color: #f7b75e;
+  background-color: #ffff;
+  border: 2px solid black;
 }
 
 .card:last-child {
@@ -124,4 +129,85 @@ h2{
 
 .card-container h2{
   margin-left: 0;
+}
+
+/* contact form  */
+.container {
+  /* padding: 16rem; */
+  padding-left: 15%;
+  padding-bottom: 2%;
+}
+body {
+  /* background: #eeaeca; */
+  background: -moz-linear-gradient(138deg, rgba(238, 174, 202, 1) 0%, rgba(35, 159, 245, 1) 100%);
+  background: -webkit-linear-gradient(138deg, rgba(238, 174, 202, 1) 0%, rgba(35, 159, 245, 1) 100%);
+  background: linear-gradient(138deg, rgba(238, 174, 202, 1) 0%, rgba(35, 159, 245, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#239ff5",GradientType=1);
+}
+textarea {
+  resize: none;
+}
+.form-control:focus {
+  /* border: 2px solid #d9b; */
+  /* box-shadow: 0 0 0 0px; */
+}
+.customStyle-card-title-form {
+  margin-bottom: 1rem;
+}
+.customStyle-card-form {
+  height: 22rem;
+  width: 45rem;
+  /* border-radius: 1rem; */
+  padding: 0.75rem;
+  /* background-color: #e2eed9; */
+  color: black;
+  /* border: 4px solid #d9b; */
+}
+.customStyle-card-form span {
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+.customStyle-form-row {
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+.customStyle-card-form .form-control {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  /* border-radius: 0.25rem; */
+  /* border: 2px solid #d9b; */
+}
+.customStyle-card-form .input-group-text {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  border-radius: 0.25rem;
+  /* border: 2px solid #d9b; */
+  /* background-color: #1f1a38; */
+  /* color: white; */
+  border-right: 0px;
+}
+#contactName {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+#contactMessage {
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+.customStyle-btn-primary {
+  /* background-color: #1f1a38; */
+  /* border: 2px solid #d9b; */
+  transition: 0.3s;
+  width: 6rem;
+}
+.customStyle-btn-primary:hover {
+  width: 9rem;
+  /* background-color: #d9b; */
+  /* border: 2px solid #d9b; */
+}
+.customStyle-Form-Correct {
+  /* background-color: #99f7ab; */
+}
+.customStyle-Form-Incorrect {
+  /* background-color: #ffc15e; */
 }

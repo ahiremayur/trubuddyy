@@ -11,7 +11,6 @@ import { SearchModel } from 'src/app/utilities/models/workData';
 })
 export class HomeComponent implements OnInit {
   items: SearchModel[]=[];
-
   name!: string ;
   job!: string ;
   degree!: string ;

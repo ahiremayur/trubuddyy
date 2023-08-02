@@ -3,11 +3,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
-/* *{
-    margin: 0;
-    padding: 0;
-    
-} */
 .full{
   /* background-color: #4bafed; */
   text-align: center;
@@ -16,8 +11,6 @@
 }
 
 nav{
-    /* margin: 0 auto;   */
-    /* position: sticky; */
     align-items: center;
     margin: auto;
 }
@@ -51,42 +44,46 @@ nav{
     background-color: #574D4D;
     color: #fff;
     border-radius: 40px; 
-    width: 35vb;
+    /* width: 35vb; */
     /* margin: auto; */
-    /* position:relative; */
+    position:relative;
     /* box-shadow: -2px -2px 7px white,2px -2px 5px white; */
-    /* overflow: hidden; */
+    overflow: hidden;
     z-index: 100;
-    /* margin-top: 0; */
-    /* margin-bottom: 0.5%; */
-    margin-left: 8%;
+   
    justify-content: center;
    
   }
 
-  .navLinks{
+  .menu{
     height: 10vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* padding: 20px; */
+    justify-content: space-between; 
     background-color: #574D4D;
     color: #ffffff;
-    border-radius: 40px; 
-    width: 80vb;
-    /* margin: auto; */
-    position:relative;
-    /* box-shadow: -2px -2px 7px white,2px -2px 5px white; */
-    /* overflow: hidden; */
+  
+    width: 100%;
+   
     z-index: 100;
-    /* margin-top: 0; */
-    /* margin-bottom: 0.5%; */
-    margin-left: 2%;
-    /* margin-right: 15%; */
-    /* margin: auto; */
-    padding: auto;
+
   }
 
+  .menu a{
+    margin-right: 0;
+  }
+.menu li a{
+  margin-right: 4%;
+}
+
+.group{
+  padding-right: 8%;
+  padding-left: 33%;
+  display: flex;
+  gap: 3rem;
+  font-size: 18px;
+  float: left;
+}
   .login-signup{
     height: 10vh;
     display: flex;
@@ -94,17 +91,14 @@ nav{
     justify-content: space-between;
     padding: 20px;
     background-color: #574D4D;
-    /* color: #fff; */
-    /* color: rgb(243, 224, 58); */
+
     border-radius: 40px; 
     width: 35vb;
-    /* margin: auto; */
+ 
     position:relative;
-    /* box-shadow: -2px -2px 7px white,2px -2px 5px white; */
-    /* overflow: hidden; */
+    
     z-index: 100;
-    /* margin-top: 0; */
-    /* margin-bottom: 0.5%; */
+   
     margin-right: 4%;
     color: white;
   }
@@ -119,12 +113,13 @@ nav{
     color: #fff;
     align-items: center;
     margin-top: 0%;  
+    display: none;
   }
   
   /* NAVBAR MENU */
   .menu {
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     font-size: 18px;
   }
   
@@ -134,9 +129,9 @@ nav{
     transition: 0.3s ease;
   }
   
-  .menu li {
+  /* .menu li {
     padding: 5px 14px;
-  }
+  } */
   
   /* DROPDOWN MENU */
   .services {
@@ -149,8 +144,8 @@ nav{
     position: absolute; /*WITH RESPECT TO PARENT*/
     display: none;
     border-radius: 8px;
-    top: 35px;
-    /* overflow: hidden; */
+    top: 28px;
+    overflow: hidden;
     z-index: 100;
   }
   
@@ -217,8 +212,13 @@ input[type=checkbox] {
     .login-signup{
       display: none;
     }
+
+    .logo{
+      width: 100%;
+      display: block;
+    }
     
-    .navLinks{
+    .menu{
       display: none;
     }   
     input[type=checkbox]:checked ~ .main {
@@ -267,37 +267,38 @@ input[type=checkbox] {
       color: #fff;
       border-radius: 40px; 
       width: 20%;
-      /* margin: auto; */
-      /* position:relative; */
-      /* box-shadow: -2px -2px 7px white,2px -2px 5px white; */
-      /* overflow: hidden; */
+    
       z-index: 100;
-      /* margin-top: 0; */
-      /* margin-bottom: 0.5%; */
+      
       margin-left: 6%;
       
     }
   
-    .navLinks{
+    .menu{
       height: 10vh;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 15px;
+      padding: 25px;
       background-color: #574D4D;
       color: #ffffff;
-      border-radius: 40px; 
-      width:37%;
+      /* border-radius: 40px;  */
+      width:100%;
       /* margin: auto; */
       position:relative;
-      /* box-shadow: -2px -2px 7px white,2px -2px 5px white; */
-      /* overflow: hidden; */
+   
       z-index: 100;
-      /* margin-top: 0; */
-      /* margin-bottom: 0.5%; */
-      margin-left: 2%;
-      /* margin-right: 15%; */
+    
       
+    }
+
+    .group{
+      padding-right: 8%;
+      /* padding-left: 25%; */
+      display: flex;
+      gap: 3rem;
+      font-size: 18px;
+      float: right;
     }
   
     .login-signup{
