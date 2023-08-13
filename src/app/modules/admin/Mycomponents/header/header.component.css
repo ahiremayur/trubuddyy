@@ -3,6 +3,19 @@
     font-family: 'Raleway', sans-serif;
 }
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 .full{
   /* background-color: #4bafed; */
   text-align: center;
@@ -62,9 +75,8 @@ nav{
     justify-content: space-between; 
     background-color: #574D4D;
     color: #ffffff;
-  
     width: 100%;
-   
+   padding-right: 2%;
     z-index: 100;
 
   }
@@ -78,11 +90,13 @@ nav{
 
 .group{
   padding-right: 8%;
-  padding-left: 33%;
+  margin-right: 4%;
+  /* padding-left: 33%; */
   display: flex;
   gap: 3rem;
   font-size: 18px;
   float: left;
+  padding-left: 28vh;
 }
   .login-signup{
     height: 10vh;

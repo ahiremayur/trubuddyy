@@ -5,6 +5,7 @@ import { NgForm } from '@angular/forms';
 import { catchError, throwError } from 'rxjs';
 import {CONFIG} from '../../../../utilities/config';
 import { getAccessToken, setAccessToken } from 'src/app/utilities/token-handler';
+import { PersonalityModel } from 'src/app/utilities/models/workData';
 
 @Component({
   selector: 'app-job-education-form',
@@ -16,6 +17,13 @@ export class JobEducationFormComponent implements OnInit{
   workExperiences: any[] = [];
   schoolData: any = {};
   higherEducation: any ={};
+strength: any= {};
+weakness: any = {};
+likes: any={};
+dislikes: any={};
+describeMe: any={};
+personality: any={}
+personalityData!: PersonalityModel;
 
   ngOnInit() {
     const accessToken = getAccessToken();
@@ -26,6 +34,8 @@ export class JobEducationFormComponent implements OnInit{
     const viewmyworkexpURL = CONFIG['serverURL']+"/user/viewmyworkexp/"
     const viewmyschooleduURL = CONFIG['serverURL']+"/user/viewmyschooledu/"
     const viewmyhighereduURL = CONFIG['serverURL']+"/user/viewmyhigheredu/"
+    const mypersonalitydataURL = CONFIG['serverURL']+"/user/mypersonalitydata/"
+
 
 
     this.http.get<any>(viewmyworkexpURL , {headers}).subscribe(
@@ -34,7 +44,7 @@ export class JobEducationFormComponent implements OnInit{
         for (const items of response){
           workExperienceArray.push(items)
         }
-        console.log(workExperienceArray)
+        // console.log(workExperienceArray)
         this.workExperiences = workExperienceArray;
       },
       error => {
@@ -46,7 +56,18 @@ export class JobEducationFormComponent implements OnInit{
       (response) => {
        
         this.schoolData = response;
-        console.log(this.schoolData)
+        // console.log(this.schoolData)
+      },
+      error => {
+        console.error('Error fetching work experiences:', error);
+      }
+    );
+
+    this.http.get<any>(mypersonalitydataURL , {headers}).subscribe(
+      (response) => {
+       
+        this.personalityData = response;
+        // console.log(response)
       },
       error => {
         console.error('Error fetching work experiences:', error);
@@ -57,7 +78,7 @@ export class JobEducationFormComponent implements OnInit{
       (response) => {
        
         this.higherEducation = response;
-        console.log(this.schoolData)
+        // console.log(this.schoolData)
       },
       error => {
         console.error('Error fetching work experiences:', error);
@@ -88,6 +109,19 @@ export class JobEducationFormComponent implements OnInit{
         marks: (<HTMLInputElement>document.getElementById('marks12')).value,
         year: (<HTMLInputElement>document.getElementById('year12')).value
       },]
+
+       this.strength = [
+        (<HTMLInputElement>document.getElementById('strength')).value
+      ]
+    
+    const personality = {
+      strength : (<HTMLInputElement>document.getElementById('strength')).value,
+      weakness : (<HTMLInputElement>document.getElementById('weakness')).value,
+      likes : (<HTMLInputElement>document.getElementById('likes')).value,
+      dislikes : (<HTMLInputElement>document.getElementById('dislikes')).value,
+      discribeMe:(<HTMLInputElement>document.getElementById('describeMe')).value
+    }
+
       const higherEducation=[
       { qualification : 'graduation',
         degree: (<HTMLInputElement>document.getElementById('degree_grad')).value,
@@ -121,7 +155,8 @@ export class JobEducationFormComponent implements OnInit{
     const formData = {
       'schoolData':schoolData,
       'higherEducation':higherEducation,
-      'workExperience':workExperienceData
+      'workExperience':workExperienceData,
+      'personality': personality
     };
 
     console.log(formData);

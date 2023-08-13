@@ -1,69 +1,69 @@
-<h1>Education and Job Experience</h1>
+<h1 style="color: rgb(55, 55, 125); margin-bottom: 2%;"><b>Education and Job Experience</b></h1>
 <form
   id="experienceForm"
   #educationJobForm="ngForm"
   
 >
 <!-- (ngSubmit)="onSubmit(educationJobForm)" -->
-  <div id="entriesContainer">
+  <div id="entriesContainer" style="text-align: left; margin-left: 7%;">
     <div>
-      <h4>10TH STANDARD</h4>
-      <label for="board">BOARD</label>
+      <h4><b>10TH STANDARD</b></h4>
+      <label for="board" style="margin-right: 1%;">BOARD</label>
       <input type="text" name="board" id="board10" [value]="schoolData[0]?.board" required />
-      <label for="school">SCHOOL</label>
+      <label for="school" style="margin-right: 1%;">SCHOOL</label>
       <input type="text" name="school" id="school10" [value]="schoolData[0]?.school" required />
-      <label for="marks">MARKS</label>
+      <label for="marks" style="margin-right: 1%;">MARKS</label>
       <input type="text" name="marks" id="marks10" [value]="schoolData[0]?.marks" required />
-      <label for="year">YEAR</label>
+      <label for="year" style="margin-right: 1%;">YEAR</label>
       <input type="text" name="year" id="year10" [value]="schoolData[0]?.year" required />
       <br />
       <br />
-      <h4>12TH STANDARD</h4>
-      <label for="board">BOARD</label>
+      <h4><b>12TH STANDARD</b></h4>
+      <label for="board" style="margin-right: 1%;">BOARD</label>
       <input type="text" name="board" id="board12" [value]="schoolData[1]?.board" required />
-      <label for="school">SCHOOL</label>
+      <label for="school" style="margin-right: 1%;">SCHOOL</label>
       <input type="text" name="school" id="school12" [value]="schoolData[1]?.school" required />
-      <label for="marks">MARKS</label>
+      <label for="marks" style="margin-right: 1%;">MARKS</label>
       <input type="text" name="marks" id="marks12" [value]="schoolData[1]?.marks" required />
-      <label for="year">YEAR</label>
+      <label for="year" style="margin-right: 1%;">YEAR</label>
       <input type="text" name="year" id="year12" [value]="schoolData[1]?.year" required />
       <br />
       <br />
-      <h4>GRADUATION</h4>
-      <label for="degree">DEGREE</label>
+      <h4><b>GRADUATION</b></h4>
+      <label for="degree" style="margin-right: 1%;">DEGREE</label>
       <input type="text" name="degree" id="degree_grad" [value]="higherEducation[0]?.degree" required />
-      <label for="university">UNIVERSITY</label>
+      <label for="university" style="margin-right: 1%;">UNIVERSITY</label>
       <input type="text" name="university" id="university_grad" [value]="higherEducation[0]?.school" required />
-      <label for="marks">MARKS</label>
+      <label for="marks" style="margin-right: 1%;">MARKS</label>
       <input type="text" name="marks" id="marks_grad" [value]="higherEducation[0]?.marks" required />
-      <label for="year">YEAR</label>
+      <label for="year" style="margin-right: 1%;">YEAR</label>
       <input type="text" name="year" id="year_grad" [value]="higherEducation[0]?.year" required />
       <br />
       <br />
-      <h4>POST GRADUATION</h4>
-      <label for="degree">DEGREE</label>
+      <h4><b>POST GRADUATION</b></h4>
+      <label for="degree" style="margin-right: 1%;">DEGREE</label>
       <input type="text" name="degree" id="degree_postgrad" [value]="higherEducation[1]?.degree" required />
-      <label for="university">UNIVERSITY</label>
+      <label for="university" style="margin-right: 1%;">UNIVERSITY</label>
       <input type="text" name="university" id="university_postgrad" [value]="higherEducation[1]?.school" required />
-      <label for="marks">MARKS</label>
+      <label for="marks" style="margin-right: 1%;">MARKS</label>
       <input type="text" name="marks" id="marks_postgrad" [value]="higherEducation[1]?.marks" required />
-      <label for="year">YEAR</label>
+      <label for="year" style="margin-right: 1%;">YEAR</label>
       <input type="text" name="year" id="year_postgrad" [value]="higherEducation[1]?.year" required />
       <br />
       <br />
       <h4>PROFESSIONAL DEGREE</h4>
-      <label for="degree">DEGREE</label>
+      <label for="degree" style="margin-right: 0.5%;">DEGREE</label>
       <input type="text" name="degree" id="degree_prof" [value]="higherEducation[2]?.degree" required />
-      <label for="school">CONDUCTING BODY</label>
+      <label for="school" style="margin-right: 0.5%;">CONDUCTING BODY</label>
       <input type="text" name="school" id="school_prof" [value]="higherEducation[2]?.school" required />
-      <label for="marks">MARKS</label>
+      <label for="marks" style="margin-right: 0.5%;">MARKS</label>
       <input type="text" name="marks" id="marks_prof" [value]="higherEducation[2]?.marks" required />
-      <label for="year">YEAR</label>
+      <label for="year" style="margin-right: 0.5%;">YEAR</label>
       <input type="text" name="year" id="year_prof" [value]="higherEducation[2]?.year" required />
 
       <br /><br />
       <div class="entry">
-        <h4>JOB EXPERIANCE:</h4>
+        <h4><b>JOB EXPERIANCE</b></h4>
 
         <!-- <label for="company">COMPANY </label>
         <input type="text" name="company" id="company" required />
@@ -81,19 +81,19 @@
           >
             <h3>Work Experience {{ i + 1 }}</h3>
             <div>
-              <label for="company{{ i }}">Company:</label>
+              <label for="company{{ i }}" style="margin-right: 1%;">Company</label>
               <input type="text" id="company{{ i }}" [value]="experience.company" />
             </div>
             <div>
-              <label for="job{{ i }}">Job:</label>
+              <label for="job{{ i }}" style="margin-right: 1%;">Job</label>
               <input type="text" id="job{{ i }}" [value]="experience.job" />
             </div>
             <div>
-              <label for="description{{ i }}">Description:</label>
+              <label for="description{{ i }}" style="margin-right: 1%;">Description</label>
               <input type="text" id="description{{ i }}" [value]="experience.description"/>
             </div>
             <div>
-              <label for="duration{{ i }}">Duration:</label>
+              <label for="duration{{ i }}" style="margin-right: 1%;">Duration</label>
               <input type="text" id="duration{{ i }}" [value]="experience.duration"/>
             </div>
             <button type="button" (click)="removeWorkExperience(i)">
@@ -101,11 +101,32 @@
             </button>
           </div>
 
-          <button type="button" (click)="addWorkExperience()">
+          <button type="button" (click)="addWorkExperience()" style="margin-top: 2%;">
             Add Work Experience
           </button>
         </div>
       </div>
+
+      <h4><b>Strengths</b></h4>
+      <label for="degree" style="margin-right: 1%;">Add Strength</label>
+      <input type="text" name="strength" id="strength" [value]="personalityData.strengths"  required />
+      <br><br>
+      <h4><b>Weaknesses</b></h4>
+      <label for="degree" style="margin-right: 1%;">Add Weakness</label>
+      <input type="text" name="weakness" id="weakness" [value]="personalityData.weakness" required />
+      <br><br>
+      <h4><b>Likes</b></h4>
+      <label for="degree" style="margin-right: 1%;">Add Likes</label>
+      <input type="text" name="likes" id="likes" [value]="personalityData.likes" required />
+      <br><br>
+      <h4><b>Dislikes</b></h4>
+      <label for="degree" style="margin-right: 1%;">Add Dislikes</label>
+      <input type="text" name="dislikes" id="dislikes" [value]="personalityData.dislikes" required />
+      <br><br>
+      <h4><b>Describe Yourself</b></h4>
+      <label for="degree" style="margin-right: 1%;">ABout Yourself</label>
+      <input type="text" name="describeMe" id="describeMe" [value]="personalityData.describeMe" required />
+      <br><br>
     </div>
   </div>
   <br />
@@ -113,5 +134,5 @@
   <br />
   <br />
   <!-- <input type="submit" class="button" value="Submit" /> -->
-  <button type="button" (click)="submitForm()">Submit</button>
+  <button type="button" (click)="submitForm()" style="margin-left: 45%;margin-bottom: 3%; background-color: rgb(162, 199, 69); color: white; border-radius: 2px; width: 10%; border-color: rgb(33, 32, 32); font-size: 24px; margin-top: -6%;"><b>SUBMIT</b></button>
 </form>

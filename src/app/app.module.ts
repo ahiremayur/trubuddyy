@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 // import { NgForm } from '@angular/forms';
@@ -14,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SuccessComponent } from './components/payment/success/success.component';
 import { CancelComponent } from './components/payment/cancel/cancel.component';
+// import {Ng2TelInputModule} from 'ng2-tel-input';
 
 @NgModule({
   declarations: [
@@ -30,6 +30,7 @@ import { CancelComponent } from './components/payment/cancel/cancel.component';
     NgbDropdownModule,
     FormsModule,
     HttpClientModule,
+    // Ng2TelInputModule
     // NgForm,
     // NgModule
 

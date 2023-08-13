@@ -26,26 +26,33 @@
               <table>
                 <tbody>
                   <tr>
-                    <td>School</td>
+                    <td>School(10th)</td>
                     <td>:</td>
-                    <td>{{person.school_education[0].school}}</td><br>
-                    <!-- <td>{{person.higher_education[1].school}}</td><br> -->
-                    <!-- <td>{{person.higher_education[2].school}}</td><br> -->
-
+                    <td>{{person.school_education[0].school}}  ||  Marks: {{person.school_education[0].marks}}</td><br>
                   </tr>
                   <tr>
-                    <td>Collage</td>
+                    <td>School(12th)</td>
                     <td>:</td>
-                    <td>{{person.higher_education[0].school}}</td>
+                    <td>{{person.school_education[1].school}} || Marks: {{person.school_education[1].marks}}</td>
+                  </tr>
+                  <tr>
+                    <td>Graduation</td>
+                    <td>:</td>
+                    <td>{{person.higher_education[0].school}} || Marks: {{person.higher_education[0].marks}}</td>
+                  </tr>
+                  <tr>
+                    <td>Post Graduation</td>
+                    <td>:</td>
+                    <td>{{person.higher_education[1].school}} || Marks: {{person.higher_education[1].marks}}</td>
                   </tr>
 
 
                   <tr>
                     <td>Experiances</td>
-                    <div *ngFor="let experience of workData">
+                    
                     <td>:</td>
-                    <td>{{experience.company}}</td>
-                  </div>
+                    <td *ngFor="let experience of workData">Company: {{experience.company}} <br> Role: {{experience.description}} <br></td>
+                  
                   </tr>
 
                 </tbody>
@@ -61,13 +68,11 @@
       <b>Book 1:1 session</b>
   </button>
 
-  <div class="row">
+  <!-- <div class="row">
     <div class="testimonial">
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="testimonial-cards">
-          <!-- <img
-            src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
-          /> -->
+         
           <div class="review">
             <div
               style="
@@ -98,9 +103,7 @@
       </div>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="testimonial-cards">
-          <!-- <img
-            src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
-          /> -->
+        
           <div class="review">
             <div
               style="
@@ -132,9 +135,7 @@
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="testimonial-cards">
-          <!-- <img
-            src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=400&q=60"
-          /> -->
+         
           <div class="review">
             <div
               style="
@@ -164,5 +165,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

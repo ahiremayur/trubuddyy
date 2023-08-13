@@ -83,7 +83,7 @@ getPersonData(id: number) {
     .subscribe(
       (response: InfoModel) => {
        this.person = response;
-       console.log(response)
+      //  console.log(response)
       },
       error => {
         console.error('Error fetching person data:', error);
@@ -97,7 +97,7 @@ onDateChange(id: number){
 
 selectSlot(slot:any){
   this.selectedSlot = this.selectedDate+ '-' + slot.time
-  console.log(this.selectedSlot)
+  // console.log(this.selectedSlot)
 }
 
 startBookingProcess(){

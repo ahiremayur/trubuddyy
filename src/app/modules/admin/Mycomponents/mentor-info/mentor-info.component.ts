@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 // import { ActivatedRoute } from '@angular/router';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { CONFIG } from 'src/app/utilities/config';
-import { InfoModel } from 'src/app/utilities/models/workData';
+import { InfoModel, JobModel, SearchModel } from 'src/app/utilities/models/workData';
 import { ActivatedRoute, Router } from '@angular/router';
+import { getAccessToken } from 'src/app/utilities/token-handler';
 
 @Component({
   selector: 'app-mentor-info',
@@ -12,7 +13,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MentorInfoComponent implements OnInit {
   person!: InfoModel;
-  workData:InfoModel[]=[];
+  workData:JobModel[]=[];
+  
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -25,6 +27,7 @@ export class MentorInfoComponent implements OnInit {
       this.getPersonData(personId);
       this.getWorkData(personId)
     });
+    this.redirectToLogin();
   }
 
   getPersonData(id: number) {
@@ -33,7 +36,7 @@ export class MentorInfoComponent implements OnInit {
       .subscribe(
         (response: InfoModel) => {
          this.person = response;
-         console.log(response)
+        //  console.log(response)
          
         },
         error => {
@@ -48,10 +51,10 @@ export class MentorInfoComponent implements OnInit {
       .subscribe(
         (response) => {
           var workExperienceArray = []
-          for (const items of response){
+          for (const items of response.work_experience){
             workExperienceArray.push(items)
           }
-          console.log(workExperienceArray)
+          // console.log(workExperienceArray)
           this.workData = workExperienceArray;
         },
         error => {
@@ -62,6 +65,12 @@ export class MentorInfoComponent implements OnInit {
 
   showPersonDetails(personId: number): void {
     this.router.navigate(['/tru/book', personId]);
+  }
+
+  redirectToLogin(){
+    if (getAccessToken() == 'no'){
+      this.router.navigate(['/signup'])
+    }
   }
 
 }

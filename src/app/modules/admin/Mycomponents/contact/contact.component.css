@@ -11,7 +11,18 @@ body {
     background-repeat: no-repeat;
   }
 
-
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
   .flex-container {
     display: flex;
 }
@@ -93,7 +104,7 @@ h1{
   flex: 1;
   padding: 40px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-left: 8%;
   background-color: #ffff;
   border: 2px solid black;
@@ -103,7 +114,7 @@ h1{
   flex: 1;
   padding: 40px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-right: 8%;
   margin-left: 2%;
   background-color: #ffff;
@@ -180,7 +191,7 @@ textarea {
 .customStyle-card-form .input-group-text {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
   /* border: 2px solid #d9b; */
   /* background-color: #1f1a38; */
   /* color: white; */

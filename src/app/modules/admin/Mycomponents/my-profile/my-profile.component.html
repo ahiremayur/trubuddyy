@@ -1,4 +1,5 @@
-<h1>User Information</h1>
+<div style="">
+<p style="font-size: 54px; text-align: center; color: rgb(41, 41, 92); margin-top: 12vh;"><b>User Information</b></p>
 
 <div class="user-info">
   <img
@@ -75,7 +76,7 @@
     </div>
   </details>
 
-  <h2 style="text-align: center">WORK EXPERIENCE</h2>
+  <h2 style="text-align: center"><b>WORK EXPERIENCE</b></h2>
   <div *ngFor="let experience of workData">
     <details class="accordion">
       <summary class="accordion__title">
@@ -89,11 +90,46 @@
     </details>
   </div>
   <br /><br />
+  <h2 style="text-align: center;"><b>PERSONAL INFORMATION</b></h2>
+  <details class="accordion">
+    <summary class="accordion__title">Strengths</summary>
+    <div class="accordion__content">
+     <p>{{mypersonality.strengths}}</p>
+    </div>
+  </details>
+  <details class="accordion">
+    <summary class="accordion__title">Weaknesses</summary>
+    <div class="accordion__content">
+     <p>{{mypersonality.weakness}}</p>
+    </div>
+  </details>
+  <details class="accordion">
+    <summary class="accordion__title">Likes</summary>
+    <div class="accordion__content">
+     <p>{{mypersonality.likes}}</p>
+    </div>
+  </details>
+  <details class="accordion">
+    <summary class="accordion__title">Dislikes</summary>
+    <div class="accordion__content">
+     <p>{{mypersonality.dislikes}}</p>
+    </div>
+  </details>
+
+  <details class="accordion">
+    <summary class="accordion__title">About Me</summary>
+    <div class="accordion__content">
+     <p>{{mypersonality.describeMe}}</p>
+    </div>
+  </details>
+  <br>
+
   <button class="edit" type="button" style="margin-left: 45%">
     <a href="tru/job_education_form" style="color: white; text-decoration: none"
       ><span class="edit-icon"></span><span>Edit</span></a
     >
   </button>
+</div>
 </div>
 <!-- <a href=="" target="_blank">Read the related article</a> -->
 

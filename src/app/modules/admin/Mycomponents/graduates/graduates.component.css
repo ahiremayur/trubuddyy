@@ -76,6 +76,19 @@
     font-size: 52px;}
   }
 
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
 
   .desc{
     color: white;

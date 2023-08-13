@@ -10,6 +10,19 @@ img {
     margin-bottom: 6%;
   
   }
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
   .profile-info {
     flex-grow: 1;
   }
@@ -141,11 +154,11 @@ label{
   }
 
   button{
-    margin-left: 35%;
+    margin-left: 30%;
     
     
     /* color: white; */
-    padding: 1% 1%;
+    /* padding: 1% 1%; */
     /* width: 10%; */
     margin-top: 2%;
     margin-bottom: 3%;
@@ -192,7 +205,7 @@ label{
 	 width: 100%;
 	 max-width: 1140px;
 	 margin: 0 auto;
-	 padding: 0 15px;
+	 /* padding: 0 15px; */
 }
 
  .responsive-table {
@@ -200,27 +213,31 @@ label{
 	 border-collapse: collapse;
 	 border-radius: 10px;
 	 box-shadow: 0 0 10px rgba(0, 0, 0, 0.02);
-	 width: 100%;
-	 margin: 2rem 0;
+	 width: 80%;
+	 /* margin: 2rem ; */
 	 overflow: hidden;
+   margin: auto;
+   margin-top: 2%;
+   margin-bottom: 3%;
 }
  .responsive-table__row {
 	 display: grid;
 	 border-bottom: 1px solid #edeef2;
-	 padding: 0 1.5rem;
+	 /* padding: 0 1.5rem; */
 }
  @media (min-width: 768px) {
 	 .responsive-table__row {
-		 grid-template-columns: 2fr 1fr 2fr 2fr 1fr;
+		 grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
 	}
 }
  @media (min-width: 768px) and (max-width: 991px) {
 	 .responsive-table__row {
-		 grid-template-columns: 1fr 2fr 1fr;
+		 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	}
 }
  .responsive-table__row th, .responsive-table__row td {
 	 padding: 1rem;
+   margin: auto;
 }
  .responsive-table__head {
 	 background-color: #e1e8f2;

@@ -6,7 +6,20 @@
     padding: 35px 0px;
     /* margin-left: 5%; */
   }
-  .img {
+
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  .image img {
     min-height: 320px;
     height: 80%;
     border-radius: 10px;
@@ -53,17 +66,21 @@ body
 
 img
 {
-	/* max-width: 100%; */
+	max-width: 100%;
   
 }
 .wording p{
     font-size: 18px;
-    margin-left: 3%;
+    margin-left: 1%;
     
 }
 
 .wording{
  
+}
+
+.newtext p{
+  display: none;
 }
 
 .image
@@ -74,10 +91,11 @@ img
 
 @media (min-width: 768px)
 {
-	.image
+	.bg
 	{
 		display: flex;
 		align-items: center;
+   
 	}
   .one{
     /* background-color: aqua; */
@@ -86,7 +104,7 @@ img
 	.image img
 	{
 		/* margin-right: 1%; */
-		float: left; 
+		/* float: left;  */
 	}
 	.image::after
 	{
@@ -101,6 +119,12 @@ img
     display: block;
     text-align: center;
   }
+  .bg
+	{
+		display: flex;
+		align-items: center;
+   flex-direction: column;
+	}
 }
 
 @media (min-width: 30em)
@@ -111,6 +135,11 @@ img
 	}
 }
 
+.image img{
+  padding-left: 10%;
+ 
+}
+
 .bg{
     background-color: #f19a70;
     display: flex;
@@ -119,6 +148,33 @@ img
     padding-top: 45px;
     margin-top: 1%;
     padding-bottom: 20px;
+}
+
+@media (max-width:768px){
+  .team{
+    display: flex;
+    flex-direction: column;
+  }
+  .team-img{
+    width: 25vh;
+    height: 20%;
+    margin: auto;
+  }
+
+  .newtext p {
+    display: block;
+  }
+
+  .team p{
+  display: none;
+  }
+
+ .image img{
+  height: 12%;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-bottom: 4%;
+ }
 }
 
 .team{

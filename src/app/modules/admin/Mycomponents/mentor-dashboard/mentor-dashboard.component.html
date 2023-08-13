@@ -1,4 +1,18 @@
-<div class="card">
+<div style="background-color: rgb(234, 240, 246); ">
+  <p
+  style="
+    font-size: 44px;
+    text-align: center;
+    color: rgb(42, 42, 87);
+    margin-top: 10vh;
+  "
+>
+  <b>My Dashboard</b>
+</p>
+  <div >
+
+<div class="card" style="height: 25%; width: 50%; margin-top: 2%">
+  
   <img src="profile-picture.jpg" alt="" />
   <img
     src={{userData.profile_pic}}
@@ -11,10 +25,11 @@
     <p>Phone: {{userData.username}}</p>
     <p>Email: {{userData.email}}</p>
     <br><br>
-	  <button><a href="tru/my-profile" style="color: white; text-decoration: none;">My Profile</a></button>
+	  <button style="background-color: rgb(35, 35, 70); border-radius: 10px; font-size: 20px;"><a href="tru/my-profile" style="color: white; text-decoration: none; "><b>Go to My Profile</b></a></button>
 
   </div>
 </div>
+<div style="text-align: center;">
 
 <h2 style="margin-top: 2%;">Select a Date:</h2>
 <input type="date" [(ngModel)]="selectedDate" value="{{selectedDate}}" (change)="onDateChange()">
@@ -26,7 +41,6 @@
 </div>
 
 <!-- <button (click)="makeRequest()">Make Request</button> -->
-
 <h2>Selected Date and Time Slots:</h2>
 <p>Date: {{ selectedDate }}</p>
 <p>Selected Time Slots:</p>
@@ -34,56 +48,125 @@
   <li *ngFor="let slot of selectedTimeSlots">{{ slot.time }}</li>
 </ul>
 
-<h2 style="text-align: center">Previous Sessions</h2>
+</div>
 
-<table class="responsive-table">
+<div class="container" style="padding-bottom: 3%;">
+<h2 style="text-align: center; margin-top: 2%;"><b>Booked Sessions</b></h2>
+
+<table class="responsive-table" >
   <thead class="responsive-table__head">
     <tr class="responsive-table__row">
-      <th
+      <!-- <th
         class="responsive-table__head__title responsive-table__head__title--name"
       >
         Month
-      </th>
+      </th> -->
       <th
         class="responsive-table__head__title responsive-table__head__title--status"
       >
-        Date
+        Date and Time
       </th>
-      <th
-        class="responsive-table__head__title responsive-table__head__title--types"
-      >
-        Day
-      </th>
+     
       <th
         class="responsive-table__head__title responsive-table__head__title--update"
       >
-        time
+        Mentee Name
       </th>
       <th
         class="responsive-table__head__title responsive-table__head__title--country"
       >
+        Meet Link
+      </th>
+       <th
+        class="responsive-table__head__title responsive-table__head__title--types"
+      >
+        Create Zoom link
+      </th>
+      <th
+      class="responsive-table__head__title responsive-table__head__title--types"
+    >
+      Mentee Contact Number
+    </th>
+    </tr>
+  </thead>
+
+  <tbody class="responsive-table__body" *ngFor="let session of sessionData" >
+    <tr class="responsive-table__row">
+      <!-- <td
+        class="responsive-table__body__text responsive-table__body__text--name"
+      >
+        May
+      </td> -->
+      <td
+        class="responsive-table__body__text responsive-table__body__text--status"
+      >
+        {{session.date}}
+      </td>
+      
+      <td
+        class="responsive-table__body__text responsive-table__body__text--update"
+      >
+        {{session.mentee}}
+      </td>
+
+      
+      <td
+        class="responsive-table__body__text responsive-table__body__text--country"
+      >
+      <ng-container *ngIf="session.meet_link == ''; else meetLinkBlock">
+        link unavailable
+      </ng-container>
+      <ng-template #meetLinkBlock>
+        <a href={{session.meet_link}}><button>Start Meet</button></a>
+      </ng-template>
+        
+      </td>
+      <td
+        class="responsive-table__body__text responsive-table__body__text--types"
+      >
+        <a href={{session.create_zoom_link}}><button>Create Meet Link</button></a>
+      </td>
+      <td
+      class="responsive-table__body__text responsive-table__body__text--update"
+    >
+      {{session.contact}}
+    </td>
+    </tr>
+  </tbody>
+</table>
+<!-- <h2 style="text-align: center;"><b>Previous Sessions</b></h2>
+<table class="responsive-table" >
+  <thead class="responsive-table__head">
+    <tr class="responsive-table__row">
+    
+      <th
+        class="responsive-table__head__title responsive-table__head__title--status"
+      >
+        Date and Time
+      </th>
+    
+      <th
+        class="responsive-table__head__title responsive-table__head__title--update"
+      >
         Mentee Name
+      </th>
+      <th
+        class="responsive-table__head__title responsive-table__head__title--country"
+      >
+        Meet Link
       </th>
     </tr>
   </thead>
 
   <tbody class="responsive-table__body">
     <tr class="responsive-table__row">
-      <td
-        class="responsive-table__body__text responsive-table__body__text--name"
-      >
-        May
-      </td>
+    
       <td
         class="responsive-table__body__text responsive-table__body__text--status"
       >
         14
       </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--types"
-      >
-        Monday
-      </td>
+     
       <td
         class="responsive-table__body__text responsive-table__body__text--update"
       >
@@ -96,75 +179,13 @@
       </td>
     </tr>
     <tr class="responsive-table__row">
-      <td
-        class="responsive-table__body__text responsive-table__body__text--name"
-      >
-        May
-      </td>
+    
       <td
         class="responsive-table__body__text responsive-table__body__text--status"
       >
         14
       </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--types"
-      >
-        monday
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--update"
-      >
-        8:00pm
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--country"
-      >
-        Pulkit
-      </td>
-    </tr>
-    <tr class="responsive-table__row">
-      <td
-        class="responsive-table__body__text responsive-table__body__text--name"
-      >
-        May
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--status"
-      >
-        14
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--types"
-      >
-        monday
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--update"
-      >
-        8:00pm
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--country"
-      >
-        Pulkit
-      </td>
-    </tr>
-    <tr class="responsive-table__row">
-      <td
-        class="responsive-table__body__text responsive-table__body__text--name"
-      >
-        May
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--status"
-      >
-        14
-      </td>
-      <td
-        class="responsive-table__body__text responsive-table__body__text--types"
-      >
-        monday
-      </td>
+     
       <td
         class="responsive-table__body__text responsive-table__body__text--update"
       >
@@ -177,4 +198,7 @@
       </td>
     </tr>
   </tbody>
-</table>
+</table> -->
+</div>
+</div>
+</div>

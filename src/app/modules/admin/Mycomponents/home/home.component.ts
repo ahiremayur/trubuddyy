@@ -25,7 +25,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchData()
-      
 
   }
 
@@ -36,7 +35,7 @@ export class HomeComponent implements OnInit {
       this.http.get<SearchModel[]>(url+`?name=${this.name??""}&degree=${this.degree??""}&profession=${this.job??""}&company=${this.company??""}`).subscribe(
         (response:SearchModel[]) => {
           this.items = response;
-          console.log(response)
+          // console.log(response)
         },
         (error) => {
           console.error('Error fetching data:', error);
@@ -45,9 +44,9 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  onSearchSubmit(): void {
-    this.fetchData();
-  }
+  // onSearchSubmit(): void {
+  //   this.fetchData();
+  // }
 
   showPersonDetails(personId: number): void {
     this.router.navigate(['/tru/person', personId]);

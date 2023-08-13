@@ -6,8 +6,22 @@
     top: 0;
 }
 .icons{
-    margin-right: 15%;
+    /* margin-right: 2%; */
 }
 a{
     text-decoration: none;
+    /* margin-left: 10%; */
 }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }

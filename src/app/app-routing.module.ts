@@ -9,7 +9,9 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'payment/success', component: SuccessComponent},
   {path: 'payment/cancel', component: CancelComponent},
-  {path: 'tru', loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule)}
+  {path:'', redirectTo: '/tru/home', pathMatch:'full'},
+
+  {path: '', loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule)},
 ];
 
 @NgModule({

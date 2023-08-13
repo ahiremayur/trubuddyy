@@ -6,6 +6,7 @@ import { CONFIG } from 'src/app/utilities/config';
 import { MenteeDataModel } from 'src/app/utilities/models/userdata';
 import { setAccessToken } from 'src/app/utilities/token-handler';
 import { catchError, throwError } from 'rxjs';
+import { SessionDataMenteeModel } from 'src/app/utilities/models/workData';
 
 
 @Component({
@@ -17,6 +18,8 @@ export class MenteeDashboardComponent implements OnInit {
   constructor(private router:Router, private http: HttpClient){}
   userData!: MenteeDataModel;
   isMentor !: string;
+  sessionData: SessionDataMenteeModel[]=[];
+
   getData() {
     // Get the access token from wherever you have stored it
     const accessToken = getAccessToken();
@@ -29,10 +32,23 @@ export class MenteeDashboardComponent implements OnInit {
     // Make the API call
     this.http.get<MenteeDataModel>(CONFIG['serverURL']+'/user/myprofile', { headers }).subscribe(
       (response:MenteeDataModel) => {
-        // Handle the response here
-        console.log(response);
+        
+        // console.log(response);
         this.userData = response
         this.userData.profile_pic = 'data:image/jpeg;base64,' + this.userData.profile_pic
+      },
+      (error) => {
+        // Handle errors here
+        console.error(error);
+      }
+    );
+
+    this.http.get<any>(CONFIG['serverURL']+'/user/mysessions', { headers }).subscribe(
+      (response) => {
+        // Handle the response here
+        // console.log(response);
+        this.sessionData = response.sessions
+
       },
       (error) => {
         // Handle errors here

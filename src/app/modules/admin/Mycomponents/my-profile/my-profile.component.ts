@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { getAccessToken } from 'src/app/utilities/token-handler';
 import { CONFIG } from 'src/app/utilities/config';
-import { workexpDataModel } from 'src/app/utilities/models/workData';
+import { PersonalityModel, workexpDataModel } from 'src/app/utilities/models/workData';
 
 @Component({
   selector: 'app-my-profile',
@@ -26,6 +26,8 @@ export class MyProfileComponent implements OnInit {
   workData:  workexpDataModel[]=[];
   personalInfoData!: MenteeDataModel;
 company!:string
+mypersonality!: PersonalityModel;
+
   getData() {
     // Get the access token from wherever you have stored it
     const accessToken = getAccessToken();
@@ -48,6 +50,21 @@ company!:string
         console.error(error);
       }
     );
+
+    this.http.get<any>(CONFIG['serverURL']+'/user/mypersonalitydata/', { headers }).subscribe(
+      (response) => {
+        
+        // console.log(response);
+        
+        this.mypersonality = response;
+       
+      },
+      (error) => {
+       
+        console.error(error);
+      }
+    );
+
     const viewmyworkexpURL = CONFIG['serverURL']+"/user/viewmyworkexp/"
 
 
@@ -58,7 +75,7 @@ company!:string
         for (const items of response){
           workExperienceArray.push(items)
         }
-        console.log(workExperienceArray)
+        // console.log(workExperienceArray)
         this.workData = workExperienceArray;
 
         // console.log(response)
@@ -73,7 +90,7 @@ company!:string
     this.http.get<any>(CONFIG['serverURL']+'/user/viewmyhigheredu', { headers }).subscribe(
       (response) => {
         // Handle the response here
-        console.log(response);
+        // console.log(response);
       
         this.schoolgradData = response[0]
         this.schoolpostgradData=response[1]
@@ -88,7 +105,7 @@ company!:string
     this.http.get<any>(CONFIG['serverURL']+'/user/myprofile', { headers }).subscribe(
       (response) => {
         // Handle the response here
-        console.log(response);
+        // console.log(response);
       
         this.personalInfoData = response
         this.personalInfoData.profile_pic = 'data:image/jpeg;base64,' + this.personalInfoData.profile_pic

@@ -1,45 +1,113 @@
-<div style="background-color: #dbd1fc">
-  <h1 style=" margin-top: 10vh;
-  text-align: center;">Meet Our Mentors!</h1>
-  <h4
+<div style="background-color: rgb(249, 212, 218)">
+  <h1
+    style="
+      margin-top: 10vh;
+      font-family: Gilroy, -apple-system, BlinkMacSystemFont, Oxygen, Ubuntu,
+        Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif !important;
+      text-align: center;
+      padding-top: 6vh;
+      font-size: 54px;
+      color: rgb(41, 41, 82);
+    "
+  >
+    Meet Our Mentors!
+  </h1>
+  <p
     style="
       margin-top: 5vh;
       text-align: center;
       margin-left: 1%;
       margin-bottom: 2%;
       color: rgb(129, 40, 22);
+      font-size: 24px;
     "
   >
     <b
-      style="
-        font-family: Gilroy, -apple-system, BlinkMacSystemFont, Oxygen, Ubuntu,
-          Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Arial, sans-serif !important;
-      "
       >Grow and Learn with the guidance from our community of world class
       professionals working as mentors to help you in your career journey.</b
     >
-  </h4>
+  </p>
 
-  <form style="text-align: center">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" [(ngModel)]="name" />
-
-    <label style="padding-left: 3%" for="job">Profession</label>
-    <input type="text" id="job" name="job" [(ngModel)]="job" />
-
-    <label style="padding-left: 3%" for="degree">Degree</label>
-    <input type="text" id="degree" name="degree" [(ngModel)]="degree" />
-
+  <form style=" ">
+    <thead>
+      <tr>
+        <th>
+          <label style="padding-left: 3%" for="name">Name</label>
+        </th>
+        <th>
+          <label style="padding-left: 3%" for="job">Profession</label>
+        </th>
+        <th>
+          <label style="padding-left: 3%" for="degree">Degree</label>
+        </th>
+        <th>
+          <label style="padding-left: 3%" for="company">Company </label>
+        </th>
+        <th>
+          <label style="padding-left: 3%" for="school"
+            >School/University
+          </label>
+        </th>
+        <th>
+          <label style="padding-left: 3%" for="university">Board </label>
+        </th>
+        <!-- <th>
     <label style="padding-left: 3%" for="company">Company </label>
-    <input type="text" id="company" name="company" [(ngModel)]="company" />
-
-    <button
-      style="padding-left: 1.5%; background-color: #ffff"
+  </th>
+  <th>
+    <label style="padding-left: 3%" for="company">Company </label>
+  </th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input
+          style="width: 95%;"
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="name"
+          />
+        </td>
+        <td>
+          <input type="text" id="job" style="width: 95%;" name="job" [(ngModel)]="job" />
+        </td>
+        <td>
+          <input type="text" id="degree" style="width: 95%;" name="degree" [(ngModel)]="degree" />
+        </td>
+        <td>
+          <input
+          style="width: 95%;"
+            type="text"
+            id="company"
+            name="company"
+            [(ngModel)]="company"
+          />
+        </td>
+        <td>
+          <input type="text" style="width: 95%;" id="school" name="school" [(ngModel)]="school" />
+        </td>
+        <td>
+          <input type="text" id="board" style="width: 90%;" name="board" [(ngModel)]="board" />
+        </td>
+        <button
+      style="
+        
+        background-color: #ffff;
+        width: 100%;
+        font-size: 18px;
+      "
       type="submit"
       (click)="onSearchSubmit()"
     >
       Search
     </button>
+        
+        
+      </tr>
+      
+    </tbody>
   </form>
 
   <div class="container" style="margin-top: 3%">
@@ -47,7 +115,7 @@
       <div class="row">
         <div
           *ngFor="let item of items"
-          class="row col-12 col-sm-6 col-md-4 col-lg-3"
+          class="row col-15 col-sm-6 col-md-4 col-lg-3"
           style="margin-right: 1%"
         >
           <div class="our-team">
@@ -60,7 +128,7 @@
             </div>
             <div class="team-content">
               <h3 class="name">{{ item.full_name }}</h3>
-              <h4 class="title">{{ item.job }}</h4>
+              <h4 class="title"></h4>
             </div>
           </div>
         </div>

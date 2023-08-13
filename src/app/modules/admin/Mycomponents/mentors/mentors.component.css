@@ -1,19 +1,15 @@
-/* .imagecard{
-    height: 50%;
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
-.card-title{
-    text-align: center;
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
-
-.row{
-    margin: auto;
-    margin-bottom: 2%;
-}
-
-img{
-    height: 95%;
-}
-*/
 
 p{
     margin: auto;
@@ -139,6 +135,22 @@ body {
     transition: all 0.3s ease 0s;
     text-decoration: none;
   }
+
+  @media(max-width:885px){
+    tr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 20%;
+    }
+  
+  td, th{
+    display: block;
+    width: 100%;
+  }
+
+ 
+}
   
   .our-team .social li a:hover {
     color: #1369ce;

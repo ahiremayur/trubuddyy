@@ -5,6 +5,19 @@
     content:"\f068";
     padding-right: 5px;  
 }
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gilroy';
+    src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
 body{
   background-color:#f5f5f5;
 }
@@ -31,19 +44,19 @@ body{
     box-shadow: 15px 16px 13px 8px rgb(4 4 4 / 5%);
     /* text-decoration: none; */
 }
-.jumbotron {
+/* .jumbotron {
     padding-top: 3%;
     padding-bottom: 3%;
     margin-bottom: 3%;
     color: inherit;
-    /* background-color: #00bcd4; */
+  
     text-align: center;
     color: #fff;
     background-color: #FBAB7E;
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
     margin-top: 6%;
 
-}
+} */
 h3{
   text-align: center;
 }

@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100');
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media (max-width: 876px){
+  video{
+width: 100%;
+  }
+.maintext {
+
+ font-size: 16px;
+}
+}
 
 body {
   height: 100%;
@@ -112,8 +134,8 @@ body {
   }
   
   video {
-    object-fit: cover; 
-    position: absolute;
+    /* object-fit: cover;  */
+    /* position: absolute; */
     height: 600px;
     width: 100%;
     top: 0;
@@ -413,14 +435,27 @@ a{
   }
 }
 
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 
 .feedback{
-  background-color: #f8f7f2;
+  background-color: rgb(252, 210, 150);
   padding-top: 4%;
   /* align-items: center; */
   /* justify-content: center; */
   /* width: 100%; */
 }
+
+/* .feedback .h1{
+  font-family:  'Gilroy'; 
+} */
+
+/* @font-face {
+  font-family: 'Gilroy-bold';
+  font-style: normal;
+  font-weight: 100;
+  src: url('https://fonts.cdnfonts.com/css/gilroy-bold');
+ 
+} */
 
 
 .testimonial-cards {
@@ -476,7 +511,7 @@ body {
 }
 .slider {
   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  /* box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
   height: 100px;
   margin: auto;
   overflow: hidden;

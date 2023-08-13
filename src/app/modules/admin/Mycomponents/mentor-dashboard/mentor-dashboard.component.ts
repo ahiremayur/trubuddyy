@@ -8,9 +8,8 @@ import { setAccessToken } from 'src/app/utilities/token-handler';
 import { catchError, throwError } from 'rxjs';
 import { ApiService } from '../api.service';
 import { TimeSlotService } from '../time-slot.service';
-
 import { finalize, firstValueFrom } from 'rxjs';
-import { timeDataModel } from 'src/app/utilities/models/workData';
+import { SessionDataMentorModel, timeDataModel } from 'src/app/utilities/models/workData';
 
 interface TimeSlot {
   time: string;
@@ -24,10 +23,13 @@ interface TimeSlot {
 })
 export class MentorDashboardComponent implements OnInit {
   isMentor !:string
-  constructor(private router:Router, private http: HttpClient, private timeSlotService: TimeSlotService){}
   userData!: MenteeDataModel;
+  sessionData: SessionDataMentorModel[]=[]
+  date!: string;
+  mentee!: string;
+  meet_link!:string;
 
-
+  constructor(private router:Router, private http: HttpClient, private timeSlotService: TimeSlotService){}
 
   getData() {
     // Get the access token from wherever you have stored it
@@ -41,8 +43,8 @@ export class MentorDashboardComponent implements OnInit {
     // Make the API call
     this.http.get<MenteeDataModel>(CONFIG['serverURL']+'/user/myprofile', { headers }).subscribe(
       (response:MenteeDataModel) => {
-        // Handle the response here
-        console.log(response);
+       
+        // console.log(response);
         this.userData = response
         this.userData.profile_pic = 'data:image/jpeg;base64,' + this.userData.profile_pic
       },
@@ -51,6 +53,31 @@ export class MentorDashboardComponent implements OnInit {
         console.error(error);
       }
     );
+
+    this.http.get<any>(CONFIG['serverURL']+'/user/mysessions/', { headers }).subscribe(
+      (response) => {
+        
+        this.sessionData = response.sessions
+        // console.log(response)
+        // console.log("sess data")
+        // console.log(this.sessionData);
+
+        this.sortItemsDescending();
+      },
+      (error) => {
+       
+        console.error(error);
+      }
+    );
+  }
+
+  sortItemsDescending(): void {
+    this.sessionData.sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      
+      return dateB - dateA; // Sort in descending order
+    });
   }
 
  
@@ -89,7 +116,7 @@ pastSelectedSlots(){
   this.http.get<any>(apiUrl,{headers}).subscribe(
     response => {
       var downloadedSelectedSlots = response['selectedSlots']
-      console.log(downloadedSelectedSlots)
+      // console.log(downloadedSelectedSlots)
       this.timeSlotService.updateSlotsData(this.timeSlots);
       var downloadedbookedSlots = response['bookedSlots']
       this.timeSlots.forEach(
@@ -157,8 +184,8 @@ toggleTimeSlot(slot: TimeSlot, personId: number) {
     response => {
       // Handle the response if needed
       this.timedateData = response
-      console.log('Time slot response sent:', response);
-  console.log('Selected Time Slots:', this.selectedTimeSlots);
+      // console.log('Time slot response sent:', response);
+  // console.log('Selected Time Slots:', this.selectedTimeSlots);
 
     },
     error => {
@@ -192,8 +219,8 @@ sendTimeSlotResponse(time: string, selected: boolean) {
     response => {
       // Handle the response if needed
       this.timedateData = response
-      console.log('Time slot response sent:', response);
-  console.log('Selected Time Slots:', this.selectedTimeSlots);
+  //     console.log('Time slot response sent:', response);
+  // console.log('Selected Time Slots:', this.selectedTimeSlots);
 
     },
     error => {

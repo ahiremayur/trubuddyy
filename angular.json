@@ -23,15 +23,17 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/assets/main_page.mp4"
+              "src/assets/fonts"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/intl-tel-input/build/css/intlTelInput.css"
             ],
             "scripts": ["./node_modules/jquery/dist/jquery.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/intl-tel-input/build/js/intlTelInput.min.js"
 
             ]
           },
@@ -45,8 +47,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "8kb",
+                  "maximumError": "8kb"
                 }
               ],
               "outputHashing": "all"

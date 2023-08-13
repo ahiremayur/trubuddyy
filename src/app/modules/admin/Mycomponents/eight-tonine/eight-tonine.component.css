@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-ExtraBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../../../../../assets/Gilroy-Light.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 /* Hero Video */
 .outter.hero-video{
     width:100%;

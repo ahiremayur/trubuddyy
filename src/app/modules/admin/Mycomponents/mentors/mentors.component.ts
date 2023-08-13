@@ -18,6 +18,9 @@ export class MentorsComponent implements OnInit {
   job!: string ;
   degree!: string ;
   company!: string;
+school!:string;
+university!: string
+board!: string
 
   constructor(
     private route: ActivatedRoute,
@@ -30,7 +33,7 @@ ngOnInit(): void {
 
       this.http.get<SearchModel[]>(CONFIG['serverURL']+'/search/').subscribe(
         (response:SearchModel[]) => {      
-          console.log(response);
+          // console.log(response);
           this.items = response
         },
         (error) => {
@@ -43,12 +46,13 @@ ngOnInit(): void {
 
   fetchData() {
     this.route.queryParams.subscribe(params => {
- 
+      
       const url = CONFIG['serverURL']+'/search/'; 
-      this.http.get<any>(url+`?name=${this.name??""}&degree=${this.degree??""}&profession=${this.job??""}&company=${this.company??""}`).subscribe(
+    
+      this.http.get<any>(url+`?name=${this.name??""}&degree=${this.degree??""}&job=${this.job??""}&company=${this.company??""}&school=${this.school??""}&board=${this.board??""}`).subscribe(
         (response) => {
           this.items = response;
-          console.log(response)
+          // console.log(response)
         },
         (error) => {
           console.error('Error fetching data:', error);

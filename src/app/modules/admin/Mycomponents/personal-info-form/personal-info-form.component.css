@@ -1,6 +1,7 @@
 h1{
     text-align: center;
-    margin-top: 8%;
+    margin-top: 5%;
+    margin-bottom: 3%;
 }
 
 form{
@@ -12,7 +13,7 @@ input{
 }
 
 .image{
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 input{
@@ -39,7 +40,7 @@ font-weight: 400;
 height: 36px;
 transition: all 150ms ease-in-out 0s;
 margin-bottom: 5%;
-
+margin-left: 10%;
 }
 button:hover {
     color: rgb(255, 255, 255);
